@@ -1,7 +1,9 @@
-
+//=============================================================================
 to be updated - to be updated -to be updated - to be updated - to be updated -
 //=============================================================================
-//             THE TANGO BINDING FOR LABVIEW - Tango 8.x.x RELEASE
+
+//=============================================================================
+//             THE TANGO BINDING FOR LABVIEW - Tango 9.2.x RELEASE
 //=============================================================================
 
   1 - From the author
@@ -14,7 +16,7 @@ to be updated - to be updated -to be updated - to be updated - to be updated -
 // 1 - NOTE FROM THE AUTHOR
 //=============================================================================
 
-This is the TANGO binding for LabVIEW 2010 (or higher version) 
+This is the TANGO binding for LabVIEW 2014 (or higher version) 
 It provides the user with an access to any device within a TANGO control system. 
 This binding is composed of a shared library (dll) and several Vis.
 Please send bug report, suggestion or comment to the TANGO mailing list
