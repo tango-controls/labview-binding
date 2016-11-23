@@ -1,0 +1,114 @@
+
+to be updated - to be updated -to be updated - to be updated - to be updated -
+//=============================================================================
+//             THE TANGO BINDING FOR LABVIEW - Tango 8.x.x RELEASE
+//=============================================================================
+
+  1 - From the author
+  2 - Installing
+  3 - Using the TANGO binding
+  4 - Compiling the project
+  5 - Generating standalone TANGO application with the LabVIEW compiler
+
+//=============================================================================
+// 1 - NOTE FROM THE AUTHOR
+//=============================================================================
+
+This is the TANGO binding for LabVIEW 2010 (or higher version) 
+It provides the user with an access to any device within a TANGO control system. 
+This binding is composed of a shared library (dll) and several Vis.
+Please send bug report, suggestion or comment to the TANGO mailing list
+Have fun with TANGO under LabVIEW.
+
+Nicolas Leclercq - Synchrotron SOLEIL.
+
+//=============================================================================
+// 2 - Installing
+//=============================================================================
+
+There is no special installation process. Just make sure that LabVIEW is running
+in an environment in which the all the required DLLs (or shared libraries) are
+locatable. The binding itself (i.e. the tango_binding.{dll,so} must be in the 
+search paths of the dynamic loader. Each supported OS has it own env. variable 
+to setup the shared libraries search paths: PATH for Windows, LD_LIBRARY_PATH 
+for Linux and DYLD_LIBRARY_PATH for MacOS.
+
+Whatever is your platform, it's always a good idea to "Mass Compile" the Tango 
+Vis library (i.e. tango_binding.llb). This will rebuild the link to subVis.
+During this process, you might be asked to locate a particular Vi or the shared
+library itself (tango_binding.dll). All the Tango Vis are embedded into the Tango 
+llb. Just locate the requested Vi into the llb then let LabVIEW do the job. 
+From the LabVIEW menu, do Tools -> Advanced -> Mass Compile.
+
+BTW, it's also a good idea to "Mass Compile" the examples directory. The process
+is exactly the same.
+
+//=============================================================================
+// 3 - Using the TANGO binding
+//=============================================================================
+
+3.1 - Documentation
+
+There is no real doc (obviously :-). However, the binding comes with an example
+for each supported feature. See the "examples" directory.
+
+3.2 - Error Handling
+
+Any Tango Vi returns an error code and an error stack. Concerning the error code,
+zero means "no error", anything else means "error". The error stack will then give 
+you the details. For those who want a more "LabVIEW like" approach for their 
+error handling, the binding offers a Tango to LabVIEW error converter (see 
+tango_binding.llb -> _TangoToLabviewError.vi). 
+
+//=============================================================================
+// 4 - Compiling
+//=============================================================================
+
+4.1 - Required Software 
+
+In order to compile the project you need:
+- on linux: you need gcc-4.2 (mandatory for any LabVIEW versions in [2010, 2012])
+- on windows: msvc-10 or higher (msvc-8 still supported)
+- Tango-8.0.x (tested with 8.0.5 - see www.tango-controls.org/download)
+- omniORB-4.1.6 (see www.tango-controls.org/download)
+- ZMQ-3.1.0b (see www.tango-controls.org/download)
+- a couples of "cintools headers" located in <labview-install-dir/cintools>
+
+4.2 - Under Windows 
+
+- Download required binary packages from www.tango-controls.org/download
+
+- Open ./msvc(8,10)/compil-env-setup.bat and adapt the paths to your needs
+
+- Execute ./msvc(8,10)/run-me-to-compile.bat
+
+- Build the project
+
+- If the build succeeded, the tango_binding.dll is located in the <vis> directory.
+
+4.3 - Under Linux & MacOS X 
+
+- Sorry, there is no automake/autoconf (contributions are welcome). 
+  The makefile must be modified by hand but the modifications should be  
+  straightforward. 
+
+- Edit the Makefile and modify XXXX_INSTALL_DIRs according to your local 
+  configuration/installation. It is highly recommended to link the binding
+  against the shared version of the Tango, omniORB and zmq libraries (see
+  ./src/Makefile.shared.linux.gcc-4.2). With gcc-4.2, linking against the 
+  static omniORB libraries is known to cause a hang at LabVIEW exit.
+  
+- Open a terminal and type <make> to build the shared library
+
+- If the build succeeded, the tango_binding.dll is located in the <vis> directory.
+
+//=============================================================================
+// 5 - Generating standalone TANGO application with the LabVIEW Compiler
+//=============================================================================
+
+  You can generate TANGO oriented standalone client applications from LabVIEW.
+  See the LabVIEW doc for details.
+
+
+
+

@@ -1,0 +1,25 @@
+#
+# Resource backup , created Wed Nov 23 10:27:33 CET 2016
+#
+
+#---------------------------------------------------------
+# SERVER SineWaver/1, SineWaver device declaration
+#---------------------------------------------------------
+
+SineWaver/1/DEVICE/SineWaver: "labview/sinewaver/1"
+
+
+# --- labview/sinewaver/1 properties
+
+labview/sinewaver/1->logging_level: DEBUG
+
+#---------------------------------------------------------
+# CLASS SineWaver properties
+#---------------------------------------------------------
+
+CLASS/SineWaver->PathToPogoXmiFile: C:\mystuffs\dev\bindings\labview-cvs-soleil-trunk\examples\xmi\SineWaver.xmi
+
+
+# --- dserver/SineWaver/1 properties
+
+dserver/SineWaver/1->__SubDevices: "labview/sinewaver/1"

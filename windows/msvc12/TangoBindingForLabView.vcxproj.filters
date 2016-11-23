@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\src\DataAdapter.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\DeviceGroup.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\DeviceGroupRepository.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Endianness.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ErrorStack.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\EventManager.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LvDeviceClass.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LvDevice.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LvDeviceClassFactory.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LvDeviceImpl.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LvDeviceProxy.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LvDeviceProxyRepository.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LvDeviceRepository.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LvDeviceServer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TangoBinding.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ObjectManager.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ThreadSafeDeviceProxy.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\xml\tinyxml2.cpp">
+      <Filter>Source\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\xml\parser.cpp">
+      <Filter>Source\xml</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{359b53a0-2f5e-42cf-acf5-ba964fee4fa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inline">
+      <UniqueIdentifier>{cb873adf-a8d6-47da-a787-2a6405c86606}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{a58b89ac-6cda-423d-b649-54ecb62af5b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\xml">
+      <UniqueIdentifier>{fdb4c798-fa09-4f1f-8745-3d4bfc114b9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\xml">
+      <UniqueIdentifier>{a974d3a2-2a34-4b39-bb4a-947e0ed2cde0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc">
+      <UniqueIdentifier>{71bc6946-941a-4933-8926-f3f5cabf13d8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\CommonHeader.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Config.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\DataAdapter.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\DeviceGroup.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\DebugTrace.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\DeviceGroupRepository.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Endianness.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ErrorStack.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\EventManager.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LvDeviceAppender.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LvDeviceClass.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LvDeviceClassFactory.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LvDeviceImpl.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LvDeviceProxy.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Types.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ThreadSafeDeviceProxy.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ObjectManager.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LvDeviceRepository.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LvDeviceServer.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LvDeviceProxyRepository.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LvDevice.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\TargetPlatform.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\xml\parser.h">
+      <Filter>Include\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\xml\tinyxml2.h">
+      <Filter>Include\xml</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\DataAdapter.i">
+      <Filter>Inline</Filter>
+    </None>
+    <None Include="..\..\src\DeviceGroup.i">
+      <Filter>Inline</Filter>
+    </None>
+    <None Include="..\..\src\DeviceGroupRepository.i">
+      <Filter>Inline</Filter>
+    </None>
+    <None Include="..\..\src\Endianness.i">
+      <Filter>Inline</Filter>
+    </None>
+    <None Include="..\..\src\ErrorStack.i">
+      <Filter>Inline</Filter>
+    </None>
+    <None Include="..\..\src\EventManager.i">
+      <Filter>Inline</Filter>
+    </None>
+    <None Include="..\..\src\LvDeviceProxy.i">
+      <Filter>Inline</Filter>
+    </None>
+    <None Include="..\..\src\LvDeviceProxyRepository.i">
+      <Filter>Inline</Filter>
+    </None>
+    <None Include="..\..\src\LvDeviceRepository.i">
+      <Filter>Inline</Filter>
+    </None>
+    <None Include="..\..\src\LvDeviceServer.i">
+      <Filter>Inline</Filter>
+    </None>
+    <None Include="..\..\src\ThreadSafeDeviceProxy.i">
+      <Filter>Inline</Filter>
+    </None>
+    <None Include="..\..\src\TODO">
+      <Filter>Misc</Filter>
+    </None>
+  </ItemGroup>
+</Project>

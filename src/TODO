@@ -1,0 +1,5 @@
+
+1. throw exception if a Tango class (xmi) contains an unsupported attribute type
+  - no pipe
+  - no dev-encoded
+

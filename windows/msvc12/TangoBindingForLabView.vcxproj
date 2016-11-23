@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\DataAdapter.cpp" />
+    <ClCompile Include="..\..\src\DeviceGroup.cpp" />
+    <ClCompile Include="..\..\src\DeviceGroupRepository.cpp" />
+    <ClCompile Include="..\..\src\Endianness.cpp" />
+    <ClCompile Include="..\..\src\ErrorStack.cpp" />
+    <ClCompile Include="..\..\src\EventManager.cpp" />
+    <ClCompile Include="..\..\src\LvDevice.cpp" />
+    <ClCompile Include="..\..\src\LvDeviceClass.cpp" />
+    <ClCompile Include="..\..\src\LvDeviceClassFactory.cpp" />
+    <ClCompile Include="..\..\src\LvDeviceImpl.cpp" />
+    <ClCompile Include="..\..\src\LvDeviceProxy.cpp" />
+    <ClCompile Include="..\..\src\LvDeviceProxyRepository.cpp" />
+    <ClCompile Include="..\..\src\LvDeviceRepository.cpp" />
+    <ClCompile Include="..\..\src\LvDeviceServer.cpp" />
+    <ClCompile Include="..\..\src\ObjectManager.cpp" />
+    <ClCompile Include="..\..\src\TangoBinding.cpp" />
+    <ClCompile Include="..\..\src\ThreadSafeDeviceProxy.cpp" />
+    <ClCompile Include="..\..\src\xml\parser.cpp" />
+    <ClCompile Include="..\..\src\xml\tinyxml2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\CommonHeader.h" />
+    <ClInclude Include="..\..\src\Config.h" />
+    <ClInclude Include="..\..\src\DataAdapter.h" />
+    <ClInclude Include="..\..\src\DebugTrace.h" />
+    <ClInclude Include="..\..\src\DeviceGroup.h" />
+    <ClInclude Include="..\..\src\DeviceGroupRepository.h" />
+    <ClInclude Include="..\..\src\Endianness.h" />
+    <ClInclude Include="..\..\src\ErrorStack.h" />
+    <ClInclude Include="..\..\src\EventManager.h" />
+    <ClInclude Include="..\..\src\LvDevice.h" />
+    <ClInclude Include="..\..\src\LvDeviceAppender.h" />
+    <ClInclude Include="..\..\src\LvDeviceClass.h" />
+    <ClInclude Include="..\..\src\LvDeviceClassFactory.h" />
+    <ClInclude Include="..\..\src\LvDeviceImpl.h" />
+    <ClInclude Include="..\..\src\LvDeviceProxy.h" />
+    <ClInclude Include="..\..\src\LvDeviceProxyRepository.h" />
+    <ClInclude Include="..\..\src\LvDeviceRepository.h" />
+    <ClInclude Include="..\..\src\LvDeviceServer.h" />
+    <ClInclude Include="..\..\src\ObjectManager.h" />
+    <ClInclude Include="..\..\src\TargetPlatform.h" />
+    <ClInclude Include="..\..\src\ThreadSafeDeviceProxy.h" />
+    <ClInclude Include="..\..\src\Types.h" />
+    <ClInclude Include="..\..\src\xml\parser.h" />
+    <ClInclude Include="..\..\src\xml\tinyxml2.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\DataAdapter.i" />
+    <None Include="..\..\src\DeviceGroup.i" />
+    <None Include="..\..\src\DeviceGroupRepository.i" />
+    <None Include="..\..\src\Endianness.i" />
+    <None Include="..\..\src\ErrorStack.i" />
+    <None Include="..\..\src\EventManager.i" />
+    <None Include="..\..\src\LvDeviceProxy.i" />
+    <None Include="..\..\src\LvDeviceProxyRepository.i" />
+    <None Include="..\..\src\LvDeviceRepository.i" />
+    <None Include="..\..\src\LvDeviceServer.i" />
+    <None Include="..\..\src\ThreadSafeDeviceProxy.i" />
+    <None Include="..\..\src\TODO" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>TangoBindingForLabview</ProjectName>
+    <ProjectGuid>{F61F3AEF-70F0-47C9-BD20-CAF0CB75A09A}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\vis\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\vis\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debugx86\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\Debugx64\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\vis\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\vis\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Releasex86\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\Releasex64\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">tango_binding</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">tango_binding</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tango_binding</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tango_binding</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/TangoBindingForLabView.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\src;$(LV_INC32);$(LOG4TANGO_INC32);$(TANGO_INC32);$(OMNIORB_INC32);$(ZMQ_INC32);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;TANGO_HAS_DLL;_TANGO_HAS_THREAD_SAFE_DEVICE_PROXY_;LOG4TANGO_HAS_DLL;USE_TANGO_6_OR_SUP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>.\Debugx86/TangoBindingForLabView.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debugx86/</AssemblerListingLocation>
+      <ObjectFileName>.\Debugx86/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debugx86/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/IGNORE:4049 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>$(YAT_DBG_LIB32_LIST);$(YAT4TANGO_DBG_LIB32_LIST);$(LOG4TANGO_LIB32_LIST);$(LOG4TANGO_LIB32_LIST);$(TANGO_LIB32_LIST);$(OMNIORB_LIB32_LIST);$(ZMQ_LIB32_LIST);$(LV_LIB32_LIST);user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../vis/tango_binding.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(LV_LIB32);$(LOG4TANGO_LIB32);$(TANGO_LIB32);$(OMNIORB_LIB32);$(ZMQ_LIB32);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>../../vis/tango_binding.pdb</ProgramDatabaseFile>
+      <SupportUnloadOfDelayLoadedDLL>true</SupportUnloadOfDelayLoadedDLL>
+      <ImportLibrary>.\Debugx86/tango_binding.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ForceFileOutput>MultiplyDefinedSymbolOnly</ForceFileOutput>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debugx86/TangoBindingForLabView.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\Debug/TangoBindingForLabView.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\src;$(LV_INC64);$(LOG4TANGO_INC64);$(TANGO_INC64);$(OMNIORB_INC64);$(ZMQ_INC64);$(YAT_INC64);$(YAT4TANGO_INC64);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;WIN64;_WIN32;_WIN64;_M_X64;_64BITS;NDEBUG;_WINDOWS;_USRDLL;TANGO_HAS_DLL;LOG4TANGO_HAS_DLL;YAT4TANGO_DLL;YAT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>.\Debugx64/TangoBindingForLabView.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debugx64/</AssemblerListingLocation>
+      <ObjectFileName>.\Debugx64/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debugx64/</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/IGNORE:4049 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>$(YAT_LIB64_LIST);$(YAT4TANGO_LIB64_LIST);$(ZMQ_LIB64_LIST);$(OMNIORB_LIB64_LIST);$(LOG4TANGO_LIB64_LIST);$(TANGO_LIB64_LIST);$(LV_LIB64_LIST);%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../vis/tango_binding.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(LV_LIB64);$(LOG4TANGO_LIB64);$(TANGO_LIB64);$(OMNIORB_LIB64);$(ZMQ_LIB64);$(YAT_LIB64);$(YAT4TANGO_LIB64);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>../../vis/tango_binding.pdb</ProgramDatabaseFile>
+      <SupportUnloadOfDelayLoadedDLL>true</SupportUnloadOfDelayLoadedDLL>
+      <ImportLibrary>.\Debugx64/tango_binding.lib</ImportLibrary>
+      <ForceFileOutput>MultiplyDefinedSymbolOnly</ForceFileOutput>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debugx64/TangoBindingForLabView.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/TangoBindingForLabView.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\src;$(LV_INC32);$(LOG4TANGO_INC32);$(TANGO_INC32);$(OMNIORB_INC32);$(ZMQ_INC32);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;TANGO_HAS_DLL;LOG4TANGO_HAS_DLL;USE_TANGO_6_OR_SUP;_TANGO_HAS_THREAD_SAFE_DEVICE_PROXY_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>.\Releasex86/TangoBindingForLabView.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Releasex86/</AssemblerListingLocation>
+      <ObjectFileName>.\Releasex86/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Releasex86/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/IGNORE:4089 /IGNORE:4049  %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>$(YAT_LIB32_LIST);$(YAT4TANGO_LIB32_LIST);$(TANGO_LIB32_LIST);$(OMNIORB_LIB32_LIST);$(ZMQ_LIB32_LIST);$(LOG4TANGO_LIB32_LIST);$(LV_LIB32_LIST);user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../vis/tango_binding.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(LV_LIB32);$(LOG4TANGO_LIB32);$(TANGO_LIB32);$(OMNIORB_LIB32);$(ZMQ_LIB32);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>../../vis/tango_binding.pdb</ProgramDatabaseFile>
+      <SupportUnloadOfDelayLoadedDLL>false</SupportUnloadOfDelayLoadedDLL>
+      <ImportLibrary>.\Releasex86/tango_binding.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ForceFileOutput>MultiplyDefinedSymbolOnly</ForceFileOutput>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Releasex86/TangoBindingForLabView.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\Release/TangoBindingForLabView.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\src;$(LV_INC64);$(LOG4TANGO_INC64);$(TANGO_INC64);$(OMNIORB_INC64);$(ZMQ_INC64);$(YAT_INC64);$(YAT4TANGO_INC64);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;WIN64;_WIN32;_WIN64;_M_X64;_64BITS;NDEBUG;_WINDOWS;_USRDLL;TANGO_HAS_DLL;LOG4TANGO_HAS_DLL;YAT4TANGO_DLL;YAT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>.\Releasex64/TangoBindingForLabView.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Releasex64/</AssemblerListingLocation>
+      <ObjectFileName>.\Releasex64/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Releasex64/</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/IGNORE:4089 /IGNORE:4049  %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>$(YAT_LIB64_LIST);$(YAT4TANGO_LIB64_LIST);$(ZMQ_LIB64_LIST);$(OMNIORB_LIB64_LIST);$(LOG4TANGO_LIB64_LIST);$(TANGO_LIB64_LIST);$(LV_LIB64_LIST);%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../vis/tango_binding.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(LV_LIB64);$(LOG4TANGO_LIB64);$(TANGO_LIB64);$(OMNIORB_LIB64);$(ZMQ_LIB64);$(YAT_LIB64);$(YAT4TANGO_LIB64);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>../../vis/tango_binding.pdb</ProgramDatabaseFile>
+      <SupportUnloadOfDelayLoadedDLL>false</SupportUnloadOfDelayLoadedDLL>
+      <ImportLibrary>.\Releasex64/tango_binding.lib</ImportLibrary>
+      <PreventDllBinding>
+      </PreventDllBinding>
+      <ForceFileOutput>MultiplyDefinedSymbolOnly</ForceFileOutput>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Releasex64/TangoBindingForLabView.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

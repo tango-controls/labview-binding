@@ -1,0 +1,99 @@
+#
+# Resource backup , created Sun Apr 03 17:41:27 CEST 2016
+#
+
+#---------------------------------------------------------
+# SERVER LabviewSingleDeviceDServer/1, LabviewTangoTest device declaration
+#---------------------------------------------------------
+
+LabviewSingleDeviceDServer/1/DEVICE/LabviewTangoTest: "labview/device/1"
+
+
+# --- labview/device/1 properties
+
+labview/device/1->PropertyDevBoolean: true
+labview/device/1->PropertyDevDouble: 100
+labview/device/1->PropertyDevDoubleArray: 1.234560,\ 
+                                          12.34560,\ 
+                                          123.4560,\ 
+                                          1234.560,\ 
+                                          12345.60,\ 
+                                          123456.0
+labview/device/1->PropertyDevFloat: 12.34
+labview/device/1->PropertyDevFloatArray: 0.123456,\ 
+                                         1.234560,\ 
+                                         12.34560,\ 
+                                         123.4560,\ 
+                                         1234.560,\ 
+                                         12345.60
+labview/device/1->PropertyDevLong: -12456789
+labview/device/1->PropertyDevLongArray: -1,\ 
+                                        12,\ 
+                                        -123,\ 
+                                        1234,\ 
+                                        -12345,\ 
+                                        123456
+labview/device/1->PropertyDevShort: -1234
+labview/device/1->PropertyDevShortArray: -1,\ 
+                                         12,\ 
+                                         -123,\ 
+                                         1234,\ 
+                                         -12345
+labview/device/1->PropertyDevString: dp1.1
+labview/device/1->PropertyDevStringArray: str1,\ 
+                                          str2,\ 
+                                          str3
+labview/device/1->PropertyDevULong: 12456789
+labview/device/1->PropertyDevUShort: 1234
+
+# --- labview/device/1 attribute properties
+
+labview/device/1/devBooleanImage->archive_period: 1000
+labview/device/1/devBooleanScalar->archive_period: 1000
+labview/device/1/devBooleanSpectrum->archive_period: 1000
+labview/device/1/devDoubleImage->archive_period: 1000
+labview/device/1/devDoubleSpectrum->archive_period: 1000
+labview/device/1/devFloatImage->archive_period: 1000
+labview/device/1/devFloatSpectrum->archive_period: 1000
+labview/device/1/devLong64Image->archive_period: 1000
+labview/device/1/devLong64Scalar->archive_period: 1000
+labview/device/1/devLong64Spectrum->archive_period: 1000
+labview/device/1/devLongImage->archive_period: 1000
+labview/device/1/devLongSpectrum->archive_period: 1000
+labview/device/1/devShortImage->archive_period: 1000
+labview/device/1/devShortScalar->archive_period: 1000
+labview/device/1/devShortSpectrum->archive_period: 1000
+labview/device/1/devStateImage->archive_period: 1000
+labview/device/1/devStateScalar->archive_period: 1000
+labview/device/1/devStateSpectrum->archive_period: 1000
+labview/device/1/devStringScalar->archive_period: 1000
+labview/device/1/devStringSpectrum->archive_period: 1000
+labview/device/1/devUCharImage->archive_period: 1000
+labview/device/1/devUCharScalar->archive_period: 1000
+labview/device/1/devUCharSpectrum->archive_period: 1000
+labview/device/1/devULong64Image->archive_period: 1000
+labview/device/1/devULong64Scalar->archive_period: 1000
+labview/device/1/devULong64Spectrum->archive_period: 1000
+labview/device/1/devULongImage->archive_period: 1000
+labview/device/1/devULongScalar->archive_period: 1000
+labview/device/1/devULongSpectrum->archive_period: 1000
+labview/device/1/devUShortImage->archive_period: 1000
+labview/device/1/devUShortScalar->archive_period: 1000
+labview/device/1/devUShortSpectrum->archive_period: 1000
+labview/device/1/State->archive_period: 1000
+labview/device/1/Status->archive_period: 1000
+
+#---------------------------------------------------------
+# CLASS LabviewTangoTest properties
+#---------------------------------------------------------
+
+CLASS/LabviewTangoTest->PathToPogoXmiFile: "/home/nicolas/bindings/labview-soleil-cvs-trunk/examples/xmi/LabviewTangoTest.xmi"
+CLASS/LabviewTangoTest->Property1: cp1
+CLASS/LabviewTangoTest->Property2: cp2.1,\ 
+                                   cp2.2,\ 
+                                   cp2.3
+
+
+# --- dserver/LabviewSingleDeviceDServer/1 properties
+
+dserver/LabviewSingleDeviceDServer/1->__SubDevices: "labview/device/1"

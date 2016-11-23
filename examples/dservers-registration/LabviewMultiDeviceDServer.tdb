@@ -1,0 +1,45 @@
+#
+# Resource backup , created Sun Apr 03 17:41:40 CEST 2016
+#
+
+#---------------------------------------------------------
+# SERVER LabviewMultiDeviceDServer/1, LabviewTangoTest1 device declaration
+#---------------------------------------------------------
+
+LabviewMultiDeviceDServer/1/DEVICE/LabviewTangoTest1: "labview/device/1.1",\ 
+                                                      "labview/device/1.2"
+
+
+# --- labview/device/1.1 properties
+
+labview/device/1.1->logging_level: DEBUG
+
+#---------------------------------------------------------
+# CLASS LabviewTangoTest1 properties
+#---------------------------------------------------------
+
+CLASS/LabviewTangoTest1->PathToPogoXmiFile: "/home/nicolas/bindings/labview-soleil-cvs-trunk/examples/xmi/LabviewTangoTest1.xmi"
+
+#---------------------------------------------------------
+# SERVER LabviewMultiDeviceDServer/1, LabviewTangoTest2 device declaration
+#---------------------------------------------------------
+
+LabviewMultiDeviceDServer/1/DEVICE/LabviewTangoTest2: "labview/device/2.1"
+
+
+# --- labview/device/2.1 properties
+
+labview/device/2.1->logging_level: DEBUG
+
+#---------------------------------------------------------
+# CLASS LabviewTangoTest2 properties
+#---------------------------------------------------------
+
+CLASS/LabviewTangoTest2->PathToPogoXmiFile: "/home/nicolas/bindings/labview-soleil-cvs-trunk/examples/xmi/LabviewTangoTest2.xmi"
+
+
+# --- dserver/LabviewMultiDeviceDServer/1 properties
+
+dserver/LabviewMultiDeviceDServer/1->__SubDevices: "labview/device/1.1",\ 
+                                                   "labview/device/1.2",\ 
+                                                   "labview/device/2.1"
