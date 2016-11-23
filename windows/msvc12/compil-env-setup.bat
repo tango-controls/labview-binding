@@ -3,11 +3,10 @@
 ::------------------------------------------------------------------------
 :: ======== TANGO BINDING PATHS ======== 
 ::------------------------------------------------------------------------
-set BINDING_PATH=C:\mystuffs\dev\bindings\labview-cvs-soleil-trunk;%PATH%
-::set BINDING_PATH=C:\ica\staff\nl\bindings\labview-cvs-soleil-trunk;%PATH%
+set BINDING_PATH=C:\mystuffs\dev\bindings\labview-bindings-github
 
-set RUNTIME_PATH_X86=C:\mystuffs\dev\bindings\labview-bindings-221116\runtime\windows
-set RUNTIME_PATH_X64=C:\mystuffs\dev\bindings\labview-bindings-221116\runtime\windows
+set RUNTIME_PATH_X86=%BINDING_PATH%\runtime\windows
+set RUNTIME_PATH_X64=%BINDING_PATH%\runtime\windows
 
 set PATH=%RUNTIME_PATH_X64%\lib\vc12_dll;%PATH%
 set PATH=%RUNTIME_PATH_X86%\lib\vc10_dll;%PATH%

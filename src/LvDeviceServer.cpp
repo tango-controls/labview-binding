@@ -727,35 +727,17 @@ void LvDeviceServer::build_lv_device_list (LvStringArrayHdl device_list)
   (*device_list)->length = n;
   ::memset((*device_list)->data, 0, (*device_list)->length * sizeof(void*));
   tbfl::size_t l = 0;
-  LvStringHdl sh = 0;
+  LvStringHdl sh;
   LvServerDevicesMapConstIterator dit = device_server_cache_.ds_device_to_original_class.begin();
   for (tbfl::size_t i = 0, j = 0; i < (*device_list)->length; i += 2)
   {
     //- device name -----------------------------------------
     sh = 0;
-    l = static_cast<tbfl::size_t>(dit->first.size());
-    err = ::NumericArrayResize(iB, 1L, reinterpret_cast<UHandle*>(&sh), l);
-    if (err != noErr)
-    {
-      Tango::Except::throw_exception(_CPTC_("memory error"),
-                                     _CPTC_("NumericArrayResize failed"),
-                                     _CPTC_("LvDeviceServer::build_lv_device_list"));
-    }
-    (*sh)->length = l;
-    ::memcpy((*sh)->data, dit->first.c_str(), l);
+    DATA_ADAPTER->to_lv_str(dit->first.c_str(), sh);
     (*device_list)->data[i] = sh;
     //- class name -----------------------------------------
     sh = 0;
-    l = static_cast<tbfl::size_t>(dit->second.size());
-    err = ::NumericArrayResize(iB, 1L, reinterpret_cast<UHandle*>(&sh), l);
-    if (err != noErr)
-    {
-      Tango::Except::throw_exception(_CPTC_("memory error"),
-                                     _CPTC_("NumericArrayResize failed"),
-                                     _CPTC_("LvDeviceServer::build_lv_device_list"));
-    }
-    (*sh)->length = l;
-    ::memcpy((*sh)->data, dit->second.c_str(), l);
+    DATA_ADAPTER->to_lv_str(dit->second.c_str(), sh);
     (*device_list)->data[i + 1] = sh;
     //- next -----------------------------------------------
     ++dit;

@@ -4,7 +4,7 @@
 //   This is part of the Tango binding for LabVIEW
 //
 // = FILENAME
-//   Types.h
+//   Config.h
 //
 // = AUTHOR
 //   Nicolas Leclercq - Synchrotron SOLEIL - France

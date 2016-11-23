@@ -15,7 +15,7 @@
 // DEPENDENCIES
 //=============================================================================
 #ifndef WIN32
-#  include <sys/time.h> 
+#  include <sys/time.h>
 #endif 
 #include "CommonHeader.h"
 #include <yat/utils/XString.h>
