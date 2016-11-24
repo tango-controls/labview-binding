@@ -6,7 +6,7 @@ This is the LabVIEW client and server API for [Tango](http://tango-controls.org)
 
 # Documentation
 
-The provided 'quick start guide' explains how to implement a Tango device server In LabVIEW.
+The provided 'quick start guide' explains how to implement a Tango device server in LabVIEW. 
 
 # How to build and install using cmake
 
