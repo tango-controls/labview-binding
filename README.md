@@ -1,6 +1,6 @@
 [![logo](http://www.tango-controls.org/static/tango/img/logo_tangocontrols.png)](http://www.tango-controls.org)
 
-# About the LabVIEW bindings for Tango
+# About the LabVIEW binding for Tango
 
 This is the LabVIEW client and server API for [Tango](http://tango-controls.org). 
 
