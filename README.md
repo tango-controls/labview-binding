@@ -21,7 +21,7 @@ git clone git@github.com:tango-controls/labview-binding.git
 
 - edit the `compil-env-setup.bat` file
 ```bash
-- c:\github\labview-binding\windows\msvcxx\compil-env-setup.bat
+{edit} c:\github\labview-binding\windows\msvcxx\compil-env-setup.bat
 ```
 
 - set BINDING_PATH to the labview-binding clone location  
@@ -37,18 +37,18 @@ set LV_ROOT64=C:\Program Files\National Instruments\LabVIEW 2014
 
 - save the `compil-env-setup.bat` file then open the Visual C++ project
 ```bash
-<double-click-on> c:\github\labview-binding\windows\msvcxx\compil-env-setup.bat
+{double-click-on} c:\github\labview-binding\windows\msvcxx\compil-env-setup.bat
 ```
 
 - select the configration you want to compile then build the solution
 ```bash
-<select> one of the following combination: {release, debug} + {win32, x64}
-<build>
+{select one of the following combination} [release or debug] / [win32 or x64]
+{build}
 ```
 
 - the compilation will hopefully succeed...
 ```bash
-<check-presence> c:\github\labview-binding\tango_binding.dll
+{check-for-presence-of} c:\github\labview-binding\vis\tango_binding.dll
  ```
 
 # How to build and install on Linux using cmake
