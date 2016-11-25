@@ -29,7 +29,7 @@ git clone git@github.com:tango-controls/labview-binding.git
 set BINDING_PATH=c:\github\labview-binding 
 ```
 
-- set LV_ROOT32 and/or LV_ROOT64 according to your local LabVIEW installation
+- set LV_ROOT32 and/or LV_ROOT64 according to your local LabVIEW installations
 ```
 set LV_ROOT32=C:\Program Files (x86)\National Instruments\LabVIEW 2015
 set LV_ROOT64=C:\Program Files\National Instruments\LabVIEW 2014
@@ -48,8 +48,22 @@ set LV_ROOT64=C:\Program Files\National Instruments\LabVIEW 2014
 
 - the compilation will hopefully succeed...
 ```
+{safely-ignore} warning LNK4088: image being generated due to /FORCE option; image may not run
 {check-for-presence-of} c:\github\labview-binding\vis\tango_binding.dll
  ```
+
+- you can optionally edit the provided LabVIEW launcher and modify the PATH env. variable
+```
+{edit} c:\github\labview-binding\launcher\windows\start-labview.bat
+
+set PATH=c:\github\labview-binding\vis;%PATH%
+set PATH=c:\github\labview-binding\runtime\windows\lib\vc12_dll;%PATH%
+set PATH=c:\Program Files\National Instruments\LabVIEW 2014;%PATH%
+
+{save then double-click-on} c:\github\labview-binding\launcher\windows\start-labview.bat
+```
+
+- in case you want to use your own Tango runtime, just edit the `compil-env-setup.bat` and modify the paths then rebuild the solution
 
 # How to build and install on Linux using cmake
 
