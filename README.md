@@ -7,8 +7,9 @@ This is the LabVIEW client and server API for [Tango](http://tango-controls.org)
 # Documentation
 
 The provided 'quick start guide' explains how to implement a Tango device server in LabVIEW. 
+See `../doc/quick-start-guide/Writing a Tango Device Server in LabVIEW.pdf`
 
-# How to build and install on Windows using Microsoft Visual C++ 
+# How to build on Windows using Microsoft Visual C++ 
 - software requirements 
   * Microsoft Visual C++ >= 2013 (a.k.a msvc12) 
   * LabVIEW x86 and/or x64 >= 2014
