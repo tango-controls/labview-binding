@@ -39,7 +39,7 @@ set LV_ROOT64=C:\Program Files\National Instruments\LabVIEW 2014
 
 - save the `compil-env-setup.bat` file then open the Visual C++ project
 ```
-{double-click-on} c:\github\labview-binding\windows\msvcxx\compil-env-setup.bat
+{double-click-on} c:\github\labview-binding\windows\msvcxx\run-me-to-compile.bat
 ```
 
 - select the configration you want to compile then build the solution
