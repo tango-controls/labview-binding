@@ -3,6 +3,7 @@
 # About the LabVIEW binding for Tango
 
 This is the LabVIEW client and server API for [Tango](http://tango-controls.org). 
+It runs on Linux and Windows and supports both the x86 and x64 version of LabVIEW.
 
 # Documentation
 
