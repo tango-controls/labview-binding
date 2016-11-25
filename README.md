@@ -42,7 +42,7 @@ set LV_ROOT64=C:\Program Files\National Instruments\LabVIEW 2014
 {double-click-on} c:\github\labview-binding\windows\msvcxx\run-me-to-compile.bat
 ```
 
-- select the configration you want to compile then build the solution
+- select the configuration you want to compile then build the solution
 ```
 {select one of the following combination} [release or debug] / [win32 or x64]
 {build}
