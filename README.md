@@ -67,7 +67,7 @@ set PATH=c:\Program Files\National Instruments\LabVIEW 2014;%PATH%
 
 - in case you want to use your own Tango runtime, just edit the `compil-env-setup.bat`, modify the paths then rebuild the solution
 
-# How to build and install on Linux using cmake
+# How to build on Linux using cmake
 
 This this a work in progress. Stay tuned.
 
