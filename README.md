@@ -14,40 +14,40 @@ The provided 'quick start guide' explains how to implement a Tango device server
   * LabVIEW x86 and/or x64 >= 2014
   
 - clone the github repository in a directory of your choice (here we use c:\github)
-```bash
+```
 cd c:\github 
 git clone git@github.com:tango-controls/labview-binding.git
 ```
 
 - edit the `compil-env-setup.bat` file
-```bash
+```
 {edit} c:\github\labview-binding\windows\msvcxx\compil-env-setup.bat
 ```
 
 - set BINDING_PATH to the labview-binding clone location  
-```bash
+```
 set BINDING_PATH=c:\github\labview-binding 
 ```
 
 - set LV_ROOT32 and/or LV_ROOT64 according to your local LabVIEW installation
-```bash
+```
 set LV_ROOT32=C:\Program Files (x86)\National Instruments\LabVIEW 2015
 set LV_ROOT64=C:\Program Files\National Instruments\LabVIEW 2014
 ```
 
 - save the `compil-env-setup.bat` file then open the Visual C++ project
-```bash
+```
 {double-click-on} c:\github\labview-binding\windows\msvcxx\compil-env-setup.bat
 ```
 
 - select the configration you want to compile then build the solution
-```bash
+```
 {select one of the following combination} [release or debug] / [win32 or x64]
 {build}
 ```
 
 - the compilation will hopefully succeed...
-```bash
+```
 {check-for-presence-of} c:\github\labview-binding\vis\tango_binding.dll
  ```
 
