@@ -31,7 +31,7 @@ git clone git@github.com:tango-controls/labview-binding.git
 set BINDING_PATH=c:\github\labview-binding 
 ```
 
-- set LV_ROOT32 and/or LV_ROOT64 according to your local LabVIEW installations
+- set LV_ROOT32 and/or LV_ROOT64 according to your local LabVIEW installation(s)
 ```
 set LV_ROOT32=C:\Program Files (x86)\National Instruments\LabVIEW 2015
 set LV_ROOT64=C:\Program Files\National Instruments\LabVIEW 2014
@@ -50,8 +50,8 @@ set LV_ROOT64=C:\Program Files\National Instruments\LabVIEW 2014
 
 - the compilation will hopefully succeed
 ```
-{safely-ignore} warning LNK4088: image being generated due to /FORCE option; image may not run
-{check-for-presence-of} c:\github\labview-binding\vis\tango_binding.dll
+{safely ignore} warning LNK4088: image being generated due to /FORCE option; image may not run
+{check for presence of} c:\github\labview-binding\vis\tango_binding.dll
 ```
 
 - you can optionally edit the provided LabVIEW launcher and modify the PATH env. variable
@@ -62,7 +62,7 @@ set PATH=c:\github\labview-binding\vis;%PATH%
 set PATH=c:\github\labview-binding\runtime\windows\lib\vc12_dll;%PATH%
 set PATH=c:\Program Files\National Instruments\LabVIEW 2014;%PATH%
 
-{save then double-click-on} c:\github\labview-binding\launcher\windows\start-labview.bat
+{save then double-click on} c:\github\labview-binding\launcher\windows\start-labview.bat
 ```
 
 - in case you want to use your own Tango runtime, just edit the `compil-env-setup.bat`, modify the paths then rebuild the solution
@@ -78,7 +78,7 @@ git clone git@github.com:tango-controls/labview-binding.git
 
 - optionally, recompile the whole Tango software chain with the appropriate gcc version
   * see [cppTango](https://github.com/tango-controls/cppTango) for details
-  * using your own Tango runtime, requires `$HOME/github/labview-binding/src/Makefile` to be adapted
+  * using your own Tango runtime requires `$HOME/github/labview-binding/src/Makefile` to be adapted 
   
 - compile the binding 
 ```
@@ -88,7 +88,7 @@ make
 
 - the compilation will hopefully succeed
 ```
-{check-for-presence-of} $HOME/github/labview-binding/vis/tango_binding.so
+{check for presence of} $HOME/github/labview-binding/vis/tango_binding.so
 ```
 
 - you can optionally edit the provided LabVIEW launcher and modify the LVB_PATH variable
@@ -97,15 +97,14 @@ make
 
 {edit} $HOME/github/labview-binding/launcher/linux/start-labview.sh
 
-LVB_PATH=$HOME/github/labview-binding/runtime/linux/lib/x86/tango-9.2.2-gcc-4.3
-export LVB_PATH
+{set LVB_PATH} LVB_PATH=$HOME/github/labview-binding/runtime/linux/lib/x86/tango-9.2.2-gcc-4.3
 
-{save then execute}  $HOME/github/labview-binding/launcher/linux/start-labview.sh
+{save then execute} $HOME/github/labview-binding/launcher/linux/start-labview.sh
 ```
 
 # How to build on Linux using cmake
 
-This this a work in progress. Stay tuned.
+This is the top priotity task of the todo list. Stay tuned.
 
 # Links
 
