@@ -88,7 +88,7 @@ make
 
 - the compilation will hopefully succeed...
  ```
-{check-for-presence-of} $HOME/github/labview-binding/vis/tango_binding.so
+ {check-for-presence-of} $HOME/github/labview-binding/vis/tango_binding.so
  ```
 
 - you can optionally edit the provided LabVIEW launcher and modify the LVB_PATH variable
