@@ -104,7 +104,7 @@ make
 
 # How to build on Linux using cmake
 
-This is the top priotity task of the todo list. Stay tuned.
+This is the top priority task of the todo list. Stay tuned.
 
 # Links
 
