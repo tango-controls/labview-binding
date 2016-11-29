@@ -48,11 +48,11 @@ set LV_ROOT64=C:\Program Files\National Instruments\LabVIEW 2014
 {build}
 ```
 
-- the compilation will hopefully succeed...
+- the compilation will hopefully succeed
 ```
 {safely-ignore} warning LNK4088: image being generated due to /FORCE option; image may not run
 {check-for-presence-of} c:\github\labview-binding\vis\tango_binding.dll
- ```
+```
 
 - you can optionally edit the provided LabVIEW launcher and modify the PATH env. variable
 ```
@@ -86,10 +86,10 @@ cd $HOME/github/labview-binding/src
 make
 ```
 
-- the compilation will hopefully succeed...
- ```
- {check-for-presence-of} $HOME/github/labview-binding/vis/tango_binding.so
- ```
+- the compilation will hopefully succeed
+```
+{check-for-presence-of} $HOME/github/labview-binding/vis/tango_binding.so
+```
 
 - you can optionally edit the provided LabVIEW launcher and modify the LVB_PATH variable
 ```
