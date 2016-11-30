@@ -68,8 +68,16 @@ set PATH=c:\Program Files\National Instruments\LabVIEW 2014;%PATH%
 - in case you want to use your own Tango runtime, just edit the `compil-env-setup.bat`, modify the paths then rebuild the solution
 
 # How to build on Linux using gcc 
-The main constraint we have is to compile the binding with a gcc version producing a shared library which is binary compatible with the LabVIEW version we plan to use. It means we have to identify the proper gcc version to use before trying to compile the code. Fortunately, the NI website contains [a page providing this critical information]( http://digital.ni.com/public.nsf/allkb/4596349739E988088625761C005B197E). The provided runtime for linux has been compiled with gcc-4.3 for LabVIEW 2013 & 2014.
+The main constraint we have is to compile the binding with a gcc version producing a shared library which is binary compatible with the LabVIEW version we plan to use. It means we have to identify the proper gcc version to use before trying to compile the code. Fortunately, the NI website contains [a page providing this critical information]( http://digital.ni.com/public.nsf/allkb/4596349739E988088625761C005B197E). The following links could also be useful:
+  * [gcc ABI policy and guidelines](https://gcc.gnu.org/onlinedocs/libstdc++/manual/abi.html)
+  * [National Instruments support for Linux distributions](http://www.ni.com/product-documentation/52786/en/)
+  * [Mixing binaries compiled with different gcc versions](http://stackoverflow.com/questions/23895081)
+  * [How do you finds what version of libstdc++ library is installed on your linux machine?](http://stackoverflow.com/questions/10354636)
 
+NB: the provided runtime for linux has been compiled with `gcc-4.3` for LabVIEW 2013 & 2014. 
+ 
+Here is the compialtion process...
+ 
 - clone the github repository in a directory of your choice (here we use $HOME/github)
 ```
 cd $HOME/github
