@@ -79,6 +79,7 @@ git clone git@github.com:tango-controls/labview-binding.git
 - optionally, recompile the whole Tango software chain with the appropriate gcc version
   * see [cppTango](https://github.com/tango-controls/cppTango) for details
   * using your own Tango runtime requires `$HOME/github/labview-binding/src/Makefile` to be adapted 
+  * `$HOME/github/labview-binding/src/Makefile` is also the place where the gcc version to be used is specified
   
 - compile the binding 
 ```
