@@ -2089,7 +2089,7 @@ public:
 // methods not usable for the external world (outside the lib)
 //
 
-  void get_properties(Tango::AttributeConfig &);
+    void get_properties(Tango::AttributeConfig &);
 	void get_properties(Tango::AttributeConfig_2 &);
 	void get_properties(Tango::AttributeConfig_3 &);
 	void get_properties(Tango::AttributeConfig_5 &);

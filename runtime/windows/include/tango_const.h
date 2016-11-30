@@ -25,7 +25,7 @@
 // You should have received a copy of the GNU Lesser General Public License along with Tango.
 // If not, see <http://www.gnu.org/licenses/>.
 //
-// $Revision: 29394 $
+// $Revision: 29481 $
 //
 //=====================================================================================================================
 
@@ -42,7 +42,7 @@ namespace Tango
 
 #define   TANGO_VERSION_MAJOR        9
 #define   TANGO_VERSION_MINOR        2
-#define   TANGO_VERSION_PATCH        1
+#define   TANGO_VERSION_PATCH        2
 
 #define   TANGO_BASE_CLASS           Tango::Device_5Impl
 
