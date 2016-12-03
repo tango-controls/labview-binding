@@ -1,14 +1,15 @@
 [![logo](http://www.tango-controls.org/static/tango/img/logo_tangocontrols.png)](http://www.tango-controls.org)
 
 # About the LabVIEW binding for Tango
-
 This is the LabVIEW client and server API for [Tango](http://tango-controls.org). 
 It runs on Linux and Windows and supports both the x86 and x64 version of LabVIEW.
 
 # Documentation
-
 The provided 'quick start guide' explains how to implement a Tango device server in LabVIEW.
 See `../doc/quick-start-guide/Writing a Tango Device Server in LabVIEW.pdf`
+
+# Binary Distributions
+The [download page of Tango web side](http://www.tango-controls.org/downloads/bindings) might contain a binary package that could fit your needs - particularly on Windows. Please, have a look to the available packages before trying to recompile the source code. 
 
 # How to build on Windows using Microsoft Visual C++ 
 - software requirements 
