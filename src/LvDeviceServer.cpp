@@ -1066,7 +1066,7 @@ void LvDeviceServer::parse_device_class_interfaces (LvDeviceServerCache& dsi)
 #if ! defined(_TBFL_HAS_DEV_ENCODED_SUPPORT_)
     unsupported_data_types.push_back(Tango::DEV_ENCODED);
 #endif
-#if ! defined(_TBFL_HAS_DEV_PIPE_SUPPORT_) && (TANGO_VERSION_MAJOR >= 9)
+#if ! defined(_TBFL_HAS_DEV_PIPE_SUPPORT_) || (TANGO_VERSION_MAJOR < 9)
     unsupported_data_types.push_back(Tango::DEV_PIPE_BLOB);
 #endif
     //- check than store the class interface
