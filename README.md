@@ -1,6 +1,6 @@
 [![logo](http://www.tango-controls.org/static/tango/img/logo_tangocontrols.png)](http://www.tango-controls.org)
 
-# About the LabVIEW binding for Tango
+# About the [LabVIEW](http://www.ni.com/labview)binding for Tango
 This is the LabVIEW client and server API for [Tango](http://tango-controls.org). 
 It runs on Linux and Windows and supports both the x86 and x64 version of LabVIEW.
 
