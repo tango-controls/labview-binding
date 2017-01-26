@@ -29,7 +29,7 @@
 //-----------------------------------------------------------------------------
 // EXTERN "C" EXPORT
 //-----------------------------------------------------------------------------
-#if defined(WIN32)
+#if defined(_WINDOWS)
 # define LVB_EXPORT extern "C" __declspec (dllexport)
 # define LVB_CALLING_CONV __cdecl
 #else
