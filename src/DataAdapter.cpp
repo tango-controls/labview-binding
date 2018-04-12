@@ -62,37 +62,43 @@ public:
 
     LvGenericNumArrayHdl h = reinterpret_cast<LvGenericNumArrayHdl>(lv_data);
 
+    _A a;
+    
 #if (_TBFL_LITTLE_ENDIAN_PLATFORM_ == 1)
     switch(sizeof(_A))
     {
       case 1:
+        a = _A(*reinterpret_cast<const char*>((*h)->data));
         break;
       case 2:
-        Endianness::swap_2(reinterpret_cast<const char*>((*h)->data),
-                           reinterpret_cast<char*>((*h)->data));
+        Endianness::swap_2_array(reinterpret_cast<const char*>((*h)->data),
+                                 reinterpret_cast<char*>(&a),
+                                 1);
         break;
       case 4:
-        Endianness::swap_4(reinterpret_cast<const char*>((*h)->data),
-                           reinterpret_cast<char*>((*h)->data));
+        Endianness::swap_4_array(reinterpret_cast<const char*>((*h)->data),
+                                 reinterpret_cast<char*>(&a),
+                                 1);
         break;
-      case 8:
-        Endianness::swap_8(reinterpret_cast<const char*>((*h)->data),
-                           reinterpret_cast<char*>((*h)->data));
+      case 8:           
+        Endianness::swap_8_array(reinterpret_cast<const char*>((*h)->data),
+                                 reinterpret_cast<char*>(&a),
+                                 1);
         break;
       case 16:
-        Endianness::swap_16(reinterpret_cast<const char*>((*h)->data),
-                            reinterpret_cast<char*>((*h)->data));
+        Endianness::swap_16_array(reinterpret_cast<const char*>((*h)->data),
+                                 reinterpret_cast<char*>(&a),
+                                 1);
         break;
       default:
         Tango::Except::throw_exception(_CPTC_("unexpected data type"),
                                        _CPTC_("no support for > 128-bits data types"),
-                                       _CPTC_("Encode::cmd_scalar"));
+                                       _CPTC_("Encode::attr_scalar"));
         break;
     }
 #endif
-
-    _A* a = reinterpret_cast<_A*>((*h)->data);
-    tg_data << *a;
+       
+    tg_data << a;
   }
 
   //-----------------------------------------------------------------------------
@@ -133,27 +139,34 @@ public:
                                      _CPTC_("unexpected null input argument"),
                                      _CPTC_("Encode::attr_scalar"));
     }
+
+    _A a;
+
 #if (_TBFL_LITTLE_ENDIAN_PLATFORM_ == 1)
     switch(sizeof(_A))
     {
       case 1:
-        //- cool, nothing to do!
+        a = *reinterpret_cast<const char*>((*h)->data);
         break;
       case 2:
-        Endianness::swap_2(reinterpret_cast<const char*>((*h)->data),
-                           reinterpret_cast<char*>((*h)->data));
+        Endianness::swap_2_array(reinterpret_cast<const char*>((*h)->data),
+                                 reinterpret_cast<char*>(&a),
+                                 1);
         break;
       case 4:
-        Endianness::swap_4(reinterpret_cast<const char*>((*h)->data),
-                           reinterpret_cast<char*>((*h)->data));
+        Endianness::swap_4_array(reinterpret_cast<const char*>((*h)->data),
+                                 reinterpret_cast<char*>(&a),
+                                 1);
         break;
       case 8:
-        Endianness::swap_8(reinterpret_cast<const char*>((*h)->data),
-                           reinterpret_cast<char*>((*h)->data));
+        Endianness::swap_8_array(reinterpret_cast<const char*>((*h)->data),
+                                 reinterpret_cast<char*>(&a),
+                                 1);
         break;
       case 16:
-        Endianness::swap_16(reinterpret_cast<const char*>((*h)->data),
-                            reinterpret_cast<char*>((*h)->data));
+        Endianness::swap_16_array(reinterpret_cast<const char*>((*h)->data),
+                                 reinterpret_cast<char*>(&a),
+                                 1);
         break;
       default:
         Tango::Except::throw_exception(_CPTC_("unexpected data type"),
@@ -162,12 +175,10 @@ public:
         break;
     }
 #endif
-    //- set dimensions              
+              
     tg_attr.dim_x = 1;
     tg_attr.dim_y = 0;
-    //- push LabVIEW data into the TANGO container
-    _A* a = reinterpret_cast<_A*>((*h)->data);
-    tg_attr << *a;
+    tg_attr << a;
   }
 
   //-----------------------------------------------------------------------------
@@ -261,33 +272,38 @@ public:
     }
     LvGenericNumArrayHdl h = reinterpret_cast<LvGenericNumArrayHdl>(lv_data);
 
-    _A a = *reinterpret_cast<_A*>((*h)->data);
+    _A* p = new _A[1];
 
 #if (_TBFL_LITTLE_ENDIAN_PLATFORM_ == 1)
     switch(sizeof(_A))
     {
       case 1:
-        //- TBFL_STDOUT << "Encode::copy_lv_argout_scalar::Endianness::swap_00" << std::endl;
+        //- TBFL_STDOUT("Encode::copy_lv_argout_scalar::Endianness::swap_00");
+        *p = _A(*reinterpret_cast<const char*>((*h)->data));
         break;
       case 2:
-        //- TBFL_STDOUT << "Encode::copy_lv_argout_scalar::Endianness::swap_02" << std::endl;
-        Endianness::swap_2(reinterpret_cast<const char*>((*h)->data),
-                           reinterpret_cast<char*>(&a));
+        //- TBFL_STDOUT("Encode::copy_lv_argout_scalar::Endianness::swap_02");
+        Endianness::swap_2_array(reinterpret_cast<const char*>((*h)->data),
+                                 reinterpret_cast<char*>(p),
+                                 1);
         break;
       case 4:
-        //- TBFL_STDOUT << "Encode::copy_lv_argout_scalar::Endianness::swap_04" << std::endl;
-        Endianness::swap_4(reinterpret_cast<const char*>((*h)->data),
-                           reinterpret_cast<char*>(&a));
+        //- TBFL_STDOUT("Encode::copy_lv_argout_scalar::Endianness::swap_04");
+        Endianness::swap_4_array(reinterpret_cast<const char*>((*h)->data),
+                                 reinterpret_cast<char*>(p),
+                                 1);
         break;
       case 8:
-        //- TBFL_STDOUT << "Encode::copy_lv_argout_scalar::Endianness::swap_08" << std::endl;
-        Endianness::swap_8(reinterpret_cast<const char*>((*h)->data),
-                           reinterpret_cast<char*>(&a));
+        //- TBFL_STDOUT("Encode::copy_lv_argout_scalar::Endianness::swap_08");
+        Endianness::swap_8_array(reinterpret_cast<const char*>((*h)->data),
+                                 reinterpret_cast<char*>(p),
+                                 1);
         break;
       case 16:
-        //- TBFL_STDOUT << "Encode::copy_lv_argout_scalar::Endianness::swap_16" << std::endl;
-        Endianness::swap_16(reinterpret_cast<const char*>((*h)->data),
-                            reinterpret_cast<char*>(&a));
+        //- TBFL_STDOUT("Encode::copy_lv_argout_scalar::Endianness::swap_16");
+        Endianness::swap_16_array(reinterpret_cast<const char*>((*h)->data),
+                                  reinterpret_cast<char*>(p),
+                                  1);
         break;
       default:
         Tango::Except::throw_exception(_CPTC_("unexpected data type"),
@@ -296,8 +312,7 @@ public:
         break;
     }
 #endif
-    _A* p = new _A[1];
-    *p = a;
+
     cdb.attach_tango_data(p, 1);
   }
 
@@ -405,8 +420,8 @@ public:
 };
 
 //-----------------------------------------------------------------------------
-#define ENCODE_CMD_SCALAR(_T,_ARG_IN, _TD) \
-  Encode<_T, DUMMY_TMPL_ARG>::cmd_scalar(_ARG_IN, _TD);
+#define ENCODE_CMD_SCALAR(_A,_ARG_IN, _TD) \
+  Encode<_A, DUMMY_TMPL_ARG>::cmd_scalar(_ARG_IN, _TD);
 //-----------------------------------------------------------------------------
 #define ENCODE_CMD_ARRAY(_A, _T, _ARG_IN, _TD) \
   Encode<_A,_T>::cmd_array(_ARG_IN, _TD);
@@ -453,7 +468,7 @@ public:
     _A a;
     tg_attr >> a;
 
-    //- TBFL_STDOUT << "Encode::cmd_scalar::value-from-device-data-bswap: " << a << std::endl;
+    //- TBFL_STDOUT("Encode::cmd_scalar::value-from-device-data-bswap: " << a);
 
     MgErr err = ::NumericArrayResize(uB,  
                                      1L, 
@@ -476,34 +491,38 @@ public:
     
     (*h)->length = sizeof(_A);
 
-    _A swaped_a;
+    _A swapped_a;
     
 #if (_TBFL_LITTLE_ENDIAN_PLATFORM_ == 1)
     switch(sizeof(_A))
     {
       case 1:
-        //- TBFL_STDOUT << "Decode::cmd_scalar::Endianness::swap_00" << std::endl;
-        swaped_a = a;
+        //- TBFL_STDOUT("Decode::cmd_scalar::Endianness::swap_00");
+        swapped_a = a;
         break;
       case 2:
-        //- TBFL_STDOUT << "Decode::cmd_scalar::Endianness::swap_02" << std::endl;
-        Endianness::swap_2(reinterpret_cast<const char*>(&a),
-                           reinterpret_cast<char*>(&swaped_a));
+        //- TBFL_STDOUT("Decode::cmd_scalar::Endianness::swap_02");
+        Endianness::swap_2_array(reinterpret_cast<const char*>(&a),
+                                 reinterpret_cast<char*>(&swapped_a),
+                                 1);
         break;
       case 4:
-        //- TBFL_STDOUT << "Decode::cmd_scalar::Endianness::swap_04" << std::endl;
-        Endianness::swap_4(reinterpret_cast<const char*>(&a),
-                           reinterpret_cast<char*>(&swaped_a));
+        //- TBFL_STDOUT("Decode::cmd_scalar::Endianness::swap_04");
+        Endianness::swap_4_array(reinterpret_cast<const char*>(&a),
+                                 reinterpret_cast<char*>(&swapped_a),
+                                 1);
         break;
       case 8:
-        //- TBFL_STDOUT << "Decode::cmd_scalar::Endianness::swap_08" << std::endl;
-        Endianness::swap_8(reinterpret_cast<const char*>(&a),
-                           reinterpret_cast<char*>(&swaped_a));
+        //- TBFL_STDOUT("Decode::cmd_scalar::Endianness::swap_08");
+        Endianness::swap_8_array(reinterpret_cast<const char*>(&a),
+                                 reinterpret_cast<char*>(&swapped_a),
+                                 1);
         break;
       case 16:
-        //- TBFL_STDOUT << "Decode::cmd_scalar::Endianness::swap_16" << std::endl;
-        Endianness::swap_16(reinterpret_cast<const char*>(&a),
-                            reinterpret_cast<char*>(&swaped_a));
+        //- TBFL_STDOUT("Decode::cmd_scalar::Endianness::swap_16");
+        Endianness::swap_16_array(reinterpret_cast<const char*>(&a),
+                                  reinterpret_cast<char*>(&swapped_a),
+                                  1);
         break;
       default:
         Tango::Except::throw_exception(_CPTC_("unexpected data type"),
@@ -513,11 +532,11 @@ public:
     }
 #endif
 
-    //- TBFL_STDOUT << "Encode::cmd_scalar::value-from-device-data-aswap: " << a << std::endl;
+    //- TBFL_STDOUT("Encode::cmd_scalar::value-from-device-data-aswap: " << a);
 
-    ::memcpy((*h)->data, &swaped_a, sizeof(_A));
+    ::memcpy((*h)->data, &swapped_a, sizeof(_A));
 
-    //- TBFL_STDOUT << "Decode::cmd_scalar::decoded value: " << *reinterpret_cast<_A*>((*h)->data) << std::endl;
+    //- TBFL_STDOUT("Decode::cmd_scalar::decoded value: " << *reinterpret_cast<_A*>((*h)->data));
   }
 
   //-----------------------------------------------------------------------------
@@ -576,37 +595,41 @@ public:
     
     (*h)->length = data_size;
 
-    _A swaped_a;
+    _A swapped_a;
 
 #if (_TBFL_LITTLE_ENDIAN_PLATFORM_ == 1)
     switch(sizeof(_A))
-    {
+    { 
       case 1:
-        //- TBFL_STDOUT << "Decode::attr_scalar::Endianness::swap_00" << std::endl;
-        swaped_a = a;
+        //- TBFL_STDOUT("Decode::attr_scalar::Endianness::swap_00");
+        swapped_a = a;
         break;
       case 2:
-        //- TBFL_STDOUT << "Decode::attr_scalar::Endianness::swap_02" << std::endl;
-        Endianness::swap_2(reinterpret_cast<const char*>(&a),
-                           reinterpret_cast<char*>(&swaped_a));
+        //- TBFL_STDOUT("Decode::attr_scalar::Endianness::swap_02");
+        Endianness::swap_2_array(reinterpret_cast<const char*>(&a),
+                                 reinterpret_cast<char*>(&swapped_a),
+                                 1);
         break;
       case 4:
-        //- TBFL_STDOUT << "Decode::attr_scalar::Endianness::swap_04" << std::endl;
-        Endianness::swap_4(reinterpret_cast<const char*>(&a),
-                           reinterpret_cast<char*>(&swaped_a));
+        //- TBFL_STDOUT("Decode::attr_scalar::Endianness::swap_04");
+        Endianness::swap_4_array(reinterpret_cast<const char*>(&a),
+                                 reinterpret_cast<char*>(&swapped_a),
+                                 1);
         break;
       case 8:
-        //- TBFL_STDOUT << "Decode::attr_scalar::Endianness::swap_08" << std::endl;
-        Endianness::swap_8(reinterpret_cast<const char*>(&a),
-                           reinterpret_cast<char*>(&swaped_a));
+        //- TBFL_STDOUT("Decode::attr_scalar::Endianness::swap_08");
+        Endianness::swap_8_array(reinterpret_cast<const char*>(&a),
+                                 reinterpret_cast<char*>(&swapped_a),
+                                 1);
         break;
       case 16:
-        //- TBFL_STDOUT << "Decode::attr_scalar::Endianness::swap_16" << std::endl;
-        Endianness::swap_16(reinterpret_cast<const char*>(&a),
-                            reinterpret_cast<char*>(&swaped_a));
+        //- TBFL_STDOUT("Decode::attr_scalar::Endianness::swap_16");
+        Endianness::swap_16_array(reinterpret_cast<const char*>(&a),
+                                  reinterpret_cast<char*>(&swapped_a),
+                                  1);
         break;
       default:
-        //- TBFL_STDOUT << "Decode::attr_scalar::Endianness::swap_00" << std::endl;
+        //- TBFL_STDOUT("Decode::attr_scalar::Endianness::swap_00");
         Tango::Except::throw_exception(_CPTC_("unexpected data type"),
                                        _CPTC_("no support for > 128-bits data types"),
                                        _CPTC_("Encode::attr_scalar"));
@@ -614,7 +637,7 @@ public:
     }
 #endif
     //- attr. value
-    *(reinterpret_cast<_T*>((*h)->data) + 0) = static_cast<_T>(swaped_a);
+    *(reinterpret_cast<_T*>((*h)->data) + 0) = static_cast<_T>(swapped_a);
     //- setpoint
     *(reinterpret_cast<_T*>((*h)->data) + 1) = static_cast<_T>(0);
   }
@@ -721,29 +744,29 @@ public:
     switch( sizeof(_T) )
     {
       case 1:
-        //- TBFL_STDOUT << "Decode::tango_array_to_lv_array::Endianness::swap_00" << std::endl;
+        //- TBFL_STDOUT("Decode::tango_array_to_lv_array::Endianness::swap_00");
         ::memcpy((*h)->data, _tango_array->get_buffer(), src_n * sizeof(_T));
         break;
       case 2:
-        //- TBFL_STDOUT << "Decode::tango_array_to_lv_array::Endianness::swap_02" << std::endl;
+        //- TBFL_STDOUT("Decode::tango_array_to_lv_array::Endianness::swap_02");
         Endianness::swap_2_array(reinterpret_cast<const char*>(_tango_array->get_buffer()),
                                  reinterpret_cast<char*>((*h)->data),
                                  src_n);
         break;
       case 4:
-        //- TBFL_STDOUT << "Decode::tango_array_to_lv_array::Endianness::swap_04" << std::endl;
+        //- TBFL_STDOUT("Decode::tango_array_to_lv_array::Endianness::swap_04");
         Endianness::swap_4_array(reinterpret_cast<const char*>(_tango_array->get_buffer()),
                                  reinterpret_cast<char*>((*h)->data),
                                  src_n);
         break;
       case 8:
-        //- TBFL_STDOUT << "Decode::tango_array_to_lv_array::Endianness::swap_08" << std::endl;
+        //- TBFL_STDOUT("Decode::tango_array_to_lv_array::Endianness::swap_08");
         Endianness::swap_8_array(reinterpret_cast<const char*>(_tango_array->get_buffer()),
                                  reinterpret_cast<char*>((*h)->data),
                                  src_n);
         break;
       case 16:
-        //- TBFL_STDOUT << "Decode::tango_array_to_lv_array::Endianness::swap_16" << std::endl;
+        //- TBFL_STDOUT("Decode::tango_array_to_lv_array::Endianness::swap_16");
         Endianness::swap_16_array(reinterpret_cast<const char*>(_tango_array->get_buffer()),
                                   reinterpret_cast<char*>((*h)->data),
                                   src_n);
@@ -791,23 +814,27 @@ public:
 
     (*h)->length = l * sizeof(_T);
 
+    _T* tmp = new _T[l];
+
     for ( tbfl::size_t i = 0; i < l; i++ )
     {
       try
       {
+        /*
         TBFL_STDOUT("Decode::device_property::converting "
                     << tg_dp[i]
                     << " into a num of "
                     << sizeof(_T)
                     << " bytes");
+        */
         
-        reinterpret_cast<_T*>((*h)->data)[i] = yat::XString<_T>::to_num(tg_dp[i]);
+        tmp[i] = yat::XString<_T>::to_num(tg_dp[i]);
 
-        TBFL_STDOUT("Decode::device_property::convertion result is "
-                    << reinterpret_cast<_T*>((*h)->data)[i]);
+        //- TBFL_STDOUT("Decode::device_property::convertion result is " << tmp[i]);
       }
       catch (...)
       {
+        delete[] tmp;
         std::ostringstream oss;
         oss << "invalid entry found in device property [failed to convert '"
             << tg_dp[i]
@@ -822,39 +849,43 @@ public:
     switch( sizeof(_T) )
     {
       case 1:
-        //- TBFL_STDOUT << "Decode::tango_array_to_lv_array::Endianness::swap_00" << std::endl;
+        //- TBFL_STDOUT("Decode::tango_array_to_lv_array::Endianness::swap_00");
+        ::memcpy((*h)->data, tmp, l);
         break;
       case 2:
-        //- TBFL_STDOUT << "Decode::tango_array_to_lv_array::Endianness::swap_02" << std::endl;
-        Endianness::swap_2_array(reinterpret_cast<const char*>((*h)->data),
+        //- TBFL_STDOUT("Decode::tango_array_to_lv_array::Endianness::swap_02");
+        Endianness::swap_2_array(reinterpret_cast<const char*>(tmp),
                                  reinterpret_cast<char*>((*h)->data),
                                  l);
         break;
       case 4:
-        //- TBFL_STDOUT << "Decode::tango_array_to_lv_array::Endianness::swap_04" << std::endl;
-        Endianness::swap_4_array(reinterpret_cast<const char*>((*h)->data),
+        //- TBFL_STDOUT("Decode::tango_array_to_lv_array::Endianness::swap_04");
+        Endianness::swap_4_array(reinterpret_cast<const char*>(tmp),
                                  reinterpret_cast<char*>((*h)->data),
                                  l);
         break;
       case 8:
-        //- TBFL_STDOUT << "Decode::tango_array_to_lv_array::Endianness::swap_08" << std::endl;
-        Endianness::swap_8_array(reinterpret_cast<const char*>((*h)->data),
+        //- TBFL_STDOUT("Decode::tango_array_to_lv_array::Endianness::swap_08");
+        Endianness::swap_8_array(reinterpret_cast<const char*>(tmp),
                                  reinterpret_cast<char*>((*h)->data),
                                  l);
         break;
       case 16:
-        //- TBFL_STDOUT << "Decode::tango_array_to_lv_array::Endianness::swap_16" << std::endl;
-        Endianness::swap_16_array(reinterpret_cast<const char*>((*h)->data),
+        //- TBFL_STDOUT("Decode::tango_array_to_lv_array::Endianness::swap_16");
+        Endianness::swap_16_array(reinterpret_cast<const char*>(tmp),
                                   reinterpret_cast<char*>((*h)->data),
                                   l);
         break;
       default:
+        delete[] tmp;
         Tango::Except::throw_exception(_CPTC_("unexpected data type"),
                                        _CPTC_("no support for > 128-bits data types"),
                                        _CPTC_("Decode::device_property"));
         break;
     }
 #endif
+    
+    delete[] tmp;
   }
   
   //-----------------------------------------------------------------------------
@@ -895,34 +926,38 @@ public:
     
     (*h)->length = sizeof(_A);
 
-    _A swaped_a;
+    _A swapped_a;
     
 #if (_TBFL_LITTLE_ENDIAN_PLATFORM_ == 1)
     switch(sizeof(_A))
     {
       case 1:
-        //- TBFL_STDOUT << "Decode::cmd_scalar::Endianness::swap_00" << std::endl;
-        swaped_a = a;
+        //- TBFL_STDOUT("Decode::cmd_scalar::Endianness::swap_00");
+        swapped_a = a;
         break;
       case 2:
-        //- TBFL_STDOUT << "Decode::cmd_scalar::Endianness::swap_02" << std::endl;
-        Endianness::swap_2(reinterpret_cast<const char*>(&a),
-                           reinterpret_cast<char*>(&swaped_a));
+        //- TBFL_STDOUT("Decode::cmd_scalar::Endianness::swap_02");
+        Endianness::swap_2_array(reinterpret_cast<const char*>(&a),
+                                 reinterpret_cast<char*>(&swapped_a),
+                                 1);
         break;
       case 4:
-        //- TBFL_STDOUT << "Decode::cmd_scalar::Endianness::swap_04" << std::endl;
-        Endianness::swap_4(reinterpret_cast<const char*>(&a),
-                           reinterpret_cast<char*>(&swaped_a));
+        //- TBFL_STDOUT("Decode::cmd_scalar::Endianness::swap_04");
+        Endianness::swap_4_array(reinterpret_cast<const char*>(&a),
+                                 reinterpret_cast<char*>(&swapped_a),
+                                 1);
         break;
       case 8:
-        //- TBFL_STDOUT << "Decode::cmd_scalar::Endianness::swap_08" << std::endl;
-        Endianness::swap_8(reinterpret_cast<const char*>(&a),
-                           reinterpret_cast<char*>(&swaped_a));
+        //- TBFL_STDOUT("Decode::cmd_scalar::Endianness::swap_08");
+        Endianness::swap_8_array(reinterpret_cast<const char*>(&a),
+                                 reinterpret_cast<char*>(&swapped_a),
+                                 1);
         break;
       case 16:
-        //- TBFL_STDOUT << "Decode::cmd_scalar::Endianness::swap_16" << std::endl;
-        Endianness::swap_16(reinterpret_cast<const char*>(&a),
-                            reinterpret_cast<char*>(&swaped_a));
+        //- TBFL_STDOUT("Decode::cmd_scalar::Endianness::swap_16");
+        Endianness::swap_16_array(reinterpret_cast<const char*>(&a),
+                                  reinterpret_cast<char*>(&swapped_a),
+                                  1);
         break;
       default:
         Tango::Except::throw_exception(_CPTC_("unexpected data type"),
@@ -930,7 +965,7 @@ public:
                                        _CPTC_("Decode::cmd_scalar"));
         break;
     }
-    ::memcpy((*h)->data, &swaped_a, sizeof(_A));
+    ::memcpy((*h)->data, &swapped_a, sizeof(_A));
 #else
     ::memcpy((*h)->data, &a, sizeof(_A));
 #endif
@@ -1000,31 +1035,35 @@ public:
     switch(sizeof(_T))
     {
       case 1:
-        //- TBFL_STDOUT << "Decode::copy_tg_attr_scalar::Endianness::swap_00" << std::endl;
-        ::memcpy((*h)->data, &a, sizeof(_T));
+        //- TBFL_STDOUT("Decode::copy_tg_attr_scalar::Endianness::swap_00");
+        ::memcpy((*h)->data, &a, 1);
         break;
       case 2:
-        //- TBFL_STDOUT << "Decode::copy_tg_attr_scalar::Endianness::swap_02" << std::endl;
-        Endianness::swap_2(reinterpret_cast<const char*>(&a),
-                           reinterpret_cast<char*>((*h)->data));
+        //- TBFL_STDOUT("Decode::copy_tg_attr_scalar::Endianness::swap_02");
+        Endianness::swap_2_array(reinterpret_cast<const char*>(&a),
+                                 reinterpret_cast<char*>((*h)->data),
+                                 1);
         break;
       case 4:
-        //- TBFL_STDOUT << "Decode::copy_tg_attr_scalar::Endianness::swap_04" << std::endl;
-        Endianness::swap_4(reinterpret_cast<const char*>(&a),
-                           reinterpret_cast<char*>((*h)->data));
+        //- TBFL_STDOUT("Decode::copy_tg_attr_scalar::Endianness::swap_04");
+        Endianness::swap_4_array(reinterpret_cast<const char*>(&a),
+                                 reinterpret_cast<char*>((*h)->data),
+                                 1);
         break;
       case 8:
-        //- TBFL_STDOUT << "Decode::copy_tg_attr_scalar::Endianness::swap_08" << std::endl;
-        Endianness::swap_8(reinterpret_cast<const char*>(&a),
-                           reinterpret_cast<char*>((*h)->data));
+        //- TBFL_STDOUT("Decode::copy_tg_attr_scalar::Endianness::swap_08");
+        Endianness::swap_8_array(reinterpret_cast<const char*>(&a),
+                                 reinterpret_cast<char*>((*h)->data),
+                                 1);
         break;
       case 16:
-        //- TBFL_STDOUT << "Decode::copy_tg_attr_scalar::Endianness::swap_16" << std::endl;
-        Endianness::swap_16(reinterpret_cast<const char*>(&a),
-                            reinterpret_cast<char*>((*h)->data));
+        //- TBFL_STDOUT("Decode::copy_tg_attr_scalar::Endianness::swap_16");
+        Endianness::swap_16_array(reinterpret_cast<const char*>(&a),
+                                  reinterpret_cast<char*>((*h)->data),
+                                  1);
         break;
       default:
-        //- TBFL_STDOUT << "Decode::copy_tg_attr_scalar::Endianness::swap_00" << std::endl;
+        //- TBFL_STDOUT("Decode::copy_tg_attr_scalar::Endianness::swap_00");
         Tango::Except::throw_exception(_CPTC_("unexpected data type"),
                                        _CPTC_("no support for > 128-bits data types"),
                                        _CPTC_("Encode::copy_tg_attr_scalar"));
@@ -1077,29 +1116,29 @@ public:
     switch(sizeof(_T))
     {
       case 1:
-        //- TBFL_STDOUT << "Decode::tango_array_to_lv_array::Endianness::swap_00" << std::endl;
+        //- TBFL_STDOUT("Decode::tango_array_to_lv_array::Endianness::swap_00");
         ::memcpy((*h)->data, a, n);
         break;
       case 2:
-        //- TBFL_STDOUT << "Decode::tango_array_to_lv_array::Endianness::swap_02" << std::endl;
+        //- TBFL_STDOUT("Decode::tango_array_to_lv_array::Endianness::swap_02");
         Endianness::swap_2_array(reinterpret_cast<const char*>(a),
                                  reinterpret_cast<char*>((*h)->data),
                                  n);
         break;
       case 4:
-        //- TBFL_STDOUT << "Decode::tango_array_to_lv_array::Endianness::swap_04" << std::endl;
+        //- TBFL_STDOUT("Decode::tango_array_to_lv_array::Endianness::swap_04");
         Endianness::swap_4_array(reinterpret_cast<const char*>(a),
                                  reinterpret_cast<char*>((*h)->data),
                                  n);
         break;
       case 8:
-        //- TBFL_STDOUT << "Decode::tango_array_to_lv_array::Endianness::swap_08" << std::endl;
+        //- TBFL_STDOUT("Decode::tango_array_to_lv_array::Endianness::swap_08");
         Endianness::swap_8_array(reinterpret_cast<const char*>(a),
                                  reinterpret_cast<char*>((*h)->data),
                                  n);
         break;
       case 16:
-        //- TBFL_STDOUT << "Decode::tango_array_to_lv_array::Endianness::swap_16" << std::endl;
+        //- TBFL_STDOUT("Decode::tango_array_to_lv_array::Endianness::swap_16");
         Endianness::swap_16_array(reinterpret_cast<const char*>(a),
                                   reinterpret_cast<char*>((*h)->data),
                                   n);
