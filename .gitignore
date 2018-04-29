@@ -22,6 +22,10 @@
 *.la
 *.a
 
+# LabVIEW aliases and settings
+*.lvlps
+*.aliases
+
 # Executables
 *.exe
 *.out
