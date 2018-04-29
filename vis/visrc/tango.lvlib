@@ -309,6 +309,7 @@
 					<Item Name="_TangoReadUShortImageAttribute.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Readers/_TangoReadUShortImageAttribute.vi"/>
 					<Item Name="_TangoReadUShortScalarAttribute.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Readers/_TangoReadUShortScalarAttribute.vi"/>
 					<Item Name="_TangoReadUShortSpectrumAttribute.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Readers/_TangoReadUShortSpectrumAttribute.vi"/>
+					<Item Name="ReadAndCheckAttributeType.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Readers/ReadAndCheckAttributeType.vi"/>
 				</Item>
 				<Item Name="Extractors" Type="Folder">
 					<Item Name="avToCluster" Type="Folder">

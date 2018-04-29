@@ -73,6 +73,7 @@
 				<Property Name="Bld_buildCacheID" Type="Str">{3681D9AC-4A21-11E8-A973-54BEF7083B20}</Property>
 				<Property Name="Bld_buildSpecDescription" Type="Str">All files within a single  nonhyerarchical .llb as it was done so far, to maintain back compatibility</Property>
 				<Property Name="Bld_buildSpecName" Type="Str">Flattened LLB</Property>
+				<Property Name="Bld_excludedDirectoryCount" Type="Int">5</Property>
 				<Property Name="Bld_excludedDirectory[0]" Type="Path">vi.lib</Property>
 				<Property Name="Bld_excludedDirectory[0].pathType" Type="Str">relativeToAppDir</Property>
 				<Property Name="Bld_excludedDirectory[1]" Type="Path">resource/objmgr</Property>
@@ -82,7 +83,6 @@
 				<Property Name="Bld_excludedDirectory[3].pathType" Type="Str">relativeToAppDir</Property>
 				<Property Name="Bld_excludedDirectory[4]" Type="Path">user.lib</Property>
 				<Property Name="Bld_excludedDirectory[4].pathType" Type="Str">relativeToAppDir</Property>
-				<Property Name="Bld_excludedDirectoryCount" Type="Int">5</Property>
 				<Property Name="Bld_excludeDependentDLLs" Type="Bool">true</Property>
 				<Property Name="Bld_localDestDir" Type="Path">../tango_vi.llb</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
@@ -91,12 +91,13 @@
 				<Property Name="Bld_removeVIObj" Type="Int">1</Property>
 				<Property Name="Bld_version.build" Type="Int">8</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Destination[0].destName" Type="Str">Destination Directory</Property>
 				<Property Name="Destination[0].path" Type="Path">../tango_vi.llb</Property>
 				<Property Name="Destination[0].type" Type="Str">LLB</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
 				<Property Name="Destination[1].path" Type="Path">..</Property>
-				<Property Name="DestinationCount" Type="Int">2</Property>
+				<Property Name="SourceCount" Type="Int">3</Property>
 				<Property Name="Source[0].Container.applyDestination" Type="Bool">true</Property>
 				<Property Name="Source[0].itemID" Type="Str">{31A0A340-2C61-40ED-B310-515359047FED}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
@@ -109,7 +110,6 @@
 				<Property Name="Source[2].itemID" Type="Ref">/My Computer/SetTopLevelInLLB.vi</Property>
 				<Property Name="Source[2].sourceInclusion" Type="Str">Exclude</Property>
 				<Property Name="Source[2].type" Type="Str">VI</Property>
-				<Property Name="SourceCount" Type="Int">3</Property>
 			</Item>
 		</Item>
 	</Item>
