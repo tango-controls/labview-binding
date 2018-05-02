@@ -569,7 +569,6 @@
 			<Item Name="Events" Type="Folder">
 				<Item Name="_AttributeEventRef.ctl" Type="VI" URL="../Common VIs/Typedefs/_AttributeEventRef.ctl"/>
 				<Item Name="_AttributeConfigEventRef.ctl" Type="VI" URL="../Common VIs/Typedefs/_AttributeConfigEventRef.ctl"/>
-				<Item Name="_AttributeDataReady.ctl" Type="VI" URL="../Common VIs/Typedefs/_AttributeDataReady.ctl"/>
 				<Item Name="_AttributeDataReadyEventRef.ctl" Type="VI" URL="../Common VIs/Typedefs/_AttributeDataReadyEventRef.ctl"/>
 			</Item>
 			<Item Name="_AttributeAccess_t.ctl" Type="VI" URL="../Common VIs/Typedefs/_AttributeAccess_t.ctl"/>
