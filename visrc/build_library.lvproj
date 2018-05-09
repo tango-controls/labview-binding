@@ -89,7 +89,7 @@
 				<Property Name="Bld_postActionVIID" Type="Ref">/My Computer/SetTopLevelInLLB.vi</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{3681D321-4A21-11E8-A973-54BEF7083B20}</Property>
 				<Property Name="Bld_removeVIObj" Type="Int">1</Property>
-				<Property Name="Bld_version.build" Type="Int">11</Property>
+				<Property Name="Bld_version.build" Type="Int">15</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Destination[0].destName" Type="Str">Destination Directory</Property>
