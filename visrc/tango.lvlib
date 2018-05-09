@@ -738,9 +738,6 @@
 				<Item Name="_DServerRequestToString.vi" Type="VI" URL="../Server VIs/Private VIs/Misc/_DServerRequestToString.vi"/>
 				<Item Name="_DServerRequestTypeToString.vi" Type="VI" URL="../Server VIs/Private VIs/Misc/_DServerRequestTypeToString.vi"/>
 			</Item>
-			<Item Name="Typedefs" Type="Folder">
-				<Item Name="_DataType.ctl" Type="VI" URL="../Server VIs/Private VIs/Typedefs/_DataType.ctl"/>
-			</Item>
 		</Item>
 	</Item>
 	<Item Name="Common VIs" Type="Folder">
