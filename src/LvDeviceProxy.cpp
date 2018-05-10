@@ -301,9 +301,6 @@ LvAttributeDataType LvDeviceProxy::attribute_data_type (const std::string& _attr
         case Tango::DEV_STATE:
           return SPE_STATE;
           break;
-        case Tango::DEV_ENUM:
-          return SPE_ENUM;
-          break;
         case Tango::DEV_BOOLEAN:
           return SPE_BOOLEAN;
           break;
@@ -347,9 +344,6 @@ LvAttributeDataType LvDeviceProxy::attribute_data_type (const std::string& _attr
       {
         case Tango::DEV_STATE:
           return IMG_STATE;
-          break;
-        case Tango::DEV_ENUM:
-          return IMG_ENUM;
           break;
         case Tango::DEV_BOOLEAN:
           return IMG_BOOLEAN;
