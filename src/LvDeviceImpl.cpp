@@ -64,7 +64,7 @@ void LvDeviceImpl::init_device ()
   TBFL_TRACE(name());
   
   //- note: we never call this method directly
-  //- note: consequently, the Tango device monitor is guarantee to be locked
+  //- note: consequently, the Tango device monitor is guaranted to be locked
   
   INFO_STREAM << "initializing LabVIEW device '" << name() << "'" << std::endl;
 
@@ -137,7 +137,7 @@ void LvDeviceImpl::delete_device ()
   TBFL_TRACE(name());
      
   //- note: we never call this method directly
-  //- note: consequently, the Tango device monitor is guarantee to be locked
+  //- note: consequently, the Tango device monitor is guaranted to be locked
 
   try
   {

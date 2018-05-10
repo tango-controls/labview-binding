@@ -527,7 +527,7 @@
 			<Item Name="_DServerClientRequestType.ctl" Type="VI" URL="../Server VIs/Client Request Handling/Typedefs/_DServerClientRequestType.ctl"/>
 			<Item Name="_DServerEvent.ctl" Type="VI" URL="../Server VIs/Client Request Handling/Typedefs/_DServerEvent.ctl"/>
 			<Item Name="_DeviceProperty.ctl" Type="VI" URL="../Server VIs/Client Request Handling/Typedefs/_DeviceProperty.ctl"/>
-			<Item Name="_GenericDataBuffer.ctl" Type="VI" URL="../Server VIs/Private VIs/Typedefs/_GenericDataBuffer.ctl"/>
+			<Item Name="_GenericDataBuffer.ctl" Type="VI" URL="../Server VIs/Client Request Handling/Typedefs/_GenericDataBuffer.ctl"/>
 		</Item>
 		<Item Name="Start, Run, Stop" Type="Folder">
 			<Item Name="_DServerStart.vi" Type="VI" URL="../Server VIs/Start, Run, Stop/_DServerStart.vi"/>
@@ -737,9 +737,6 @@
 			<Item Name="Misc" Type="Folder">
 				<Item Name="_DServerRequestToString.vi" Type="VI" URL="../Server VIs/Private VIs/Misc/_DServerRequestToString.vi"/>
 				<Item Name="_DServerRequestTypeToString.vi" Type="VI" URL="../Server VIs/Private VIs/Misc/_DServerRequestTypeToString.vi"/>
-			</Item>
-			<Item Name="Typedefs" Type="Folder">
-				<Item Name="_DataType.ctl" Type="VI" URL="../Server VIs/Private VIs/Typedefs/_DataType.ctl"/>
 			</Item>
 		</Item>
 	</Item>
