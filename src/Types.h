@@ -85,7 +85,7 @@ typedef LvGenericNumArrayPtr *LvGenericNumArrayHdl;
 // TANGO DATA TYPE ENUM - MUST MATCH <_AttributeDataType.ctl> ENUM (same order required) 
 //-----------------------------------------------------------------------------
 typedef enum {
-  SCA_STATE =  0,
+  SCA_STATE = 0,
   SPE_STATE,
   IMG_STATE,
   SCA_STRING,
@@ -122,11 +122,6 @@ typedef enum {
   SPE_DOUBLE,
   IMG_DOUBLE,
   SCA_ENUM,
-  SPE_ENUM,
-  IMG_ENUM,
-  SCA_ENCODED,
-  SPE_ENCODED,
-  IMG_ENCODED,
   UNKNOWN_ATTR_DATA_TYPE
 } LvAttributeDataType;
 

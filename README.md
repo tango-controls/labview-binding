@@ -1,17 +1,20 @@
 [![logo](http://www.tango-controls.org/static/tango/img/logo_tangocontrols.png)](http://www.tango-controls.org)
 
-# About the [LabVIEW](http://www.ni.com/labview) binding for Tango
+## About the [LabVIEW](http://www.ni.com/labview) binding for Tango
 This is the LabVIEW client and server API for [Tango](http://tango-controls.org). 
 It runs on Linux and Windows and supports both the x86 and x64 version of LabVIEW.
 
-# Documentation
+## Documentation
 The provided 'quick start guide' explains how to implement a Tango device server in LabVIEW.
 See `../doc/quick-start-guide/Writing a Tango Device Server in LabVIEW.pdf`
 
-# Binary Distributions
-The [download page of Tango web side](http://www.tango-controls.org/downloads/bindings) might contain a binary package that could fit your needs - particularly on Windows. Please, have a look to the available packages before trying to recompile the source code. 
+## Binary Distributions
+The [releases page](https://github.com/tango-controls/labview-binding/releases) might contain a binary package that could fit your needs - particularly on Windows. Please, have a look to the available packages before trying to recompile the source code. 
 
-# How to build on Windows using Microsoft Visual C++ 
+## Compiling the binding
+In its implementation, the LabVIEW binding implementation relies on a shared library written in C++ and a few hundreds of LabVIEW VIs. Both the C++ and the VIs library must be built in order to be able to use the Tango binding.
+
+## How to build the C++ library on Windows using Microsoft Visual C++ 
 - software requirements 
   * Microsoft Visual C++ >= 2013 (a.k.a msvc12) 
   * LabVIEW x86 and/or x64 >= 2014
@@ -21,6 +24,10 @@ The [download page of Tango web side](http://www.tango-controls.org/downloads/bi
 cd c:\github 
 git clone git@github.com:tango-controls/labview-binding.git
 ```
+
+- download (or provide your own) Tango software chain (i.e. headers & libraries of Tango and its dependencies)
+The [releases page](https://github.com/tango-controls/labview-binding/releases) might contain a binary package that could fit your needs. Download ```tango-for-windows.tar.gz``` and expand it under ```c:\github\labview-binding\runtime```.
+Using your own Tango runtime requires `c:\github\labview-binding\windows\msvcxx\compil-env-setup.bat` to be adapted. See next section.
 
 - edit the `compil-env-setup.bat` file
 ```
@@ -68,7 +75,7 @@ set PATH=c:\Program Files\National Instruments\LabVIEW 2014;%PATH%
 
 - in case you want to use your own Tango runtime, just edit the `compil-env-setup.bat`, modify the paths then rebuild the solution
 
-# How to build on Linux using gcc 
+## How to build the C++ library on Linux using gcc 
 The main constraint we have is to compile the binding with a gcc version producing a shared library which is binary compatible with the LabVIEW version we plan to use. It means we have to identify the proper gcc version to use before trying to compile the code. Fortunately, the NI website contains [a page providing this critical information]( http://digital.ni.com/public.nsf/allkb/4596349739E988088625761C005B197E). The following links could also be useful:
   * [gcc ABI policy and guidelines](https://gcc.gnu.org/onlinedocs/libstdc++/manual/abi.html)
   * [National Instruments support for Linux distributions](http://www.ni.com/product-documentation/52786/en/)
@@ -85,10 +92,9 @@ cd $HOME/github
 git clone git@github.com:tango-controls/labview-binding.git
 ```
 
-- optionally, recompile the whole Tango software chain with the appropriate gcc version
-  * see [cppTango](https://github.com/tango-controls/cppTango) for details
-  * using your own Tango runtime requires `$HOME/github/labview-binding/src/Makefile` to be adapted 
-  * `$HOME/github/labview-binding/src/Makefile` is also the place where the gcc version to be used is specified
+- download (or provide your own) Tango software chain (i.e. headers & libraries of Tango and its dependencies)
+The [releases page](https://github.com/tango-controls/labview-binding/releases) might contain a binary package that could fit your needs. Download ```tango-for-linux.tar.gz``` and expand it under ```c:\github\labview-binding\runtime```.
+Using your own Tango runtime requires `$HOME/github/labview-binding/src/Makefile` to be adapted. This file is also the place where the gcc version to be used is specified.
   
 - compile the binding 
 ```
@@ -112,10 +118,13 @@ make
 {save then execute} $HOME/github/labview-binding/launcher/linux/start-labview.sh
 ```
 
-# How to build on Linux using cmake
+## How to build the C++ library on Linux using cmake
 
 This is the top priority task of the todo list. Stay tuned.
 
-# Links
+## How to build the VIs library
+In case you want - or need - to rebuild the tango ```llb```, all you need to do is to open  ```visrc/build_library.lvproj``` then build  ```Flattened LLB``` located under ```Build Specifications```. The resulting library should be located into ```vis/tango_vi.llb```.
+
+## Links
 
 [Tango Controls web page](http://tango-controls.org)

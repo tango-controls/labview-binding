@@ -9,9 +9,9 @@
 *.pch
 
 # Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# *.so
+# *.dylib
+# *.dll
 
 # Fortran module files
 *.mod
@@ -21,6 +21,13 @@
 *.lai
 *.la
 *.a
+
+# LabVIEW aliases and settings
+*.lvlps
+*.aliases
+
+# Backup files
+*~
 
 # Executables
 *.exe
