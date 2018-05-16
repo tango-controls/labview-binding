@@ -1,8 +1,8 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
-<Library LVVersion="14008000">
+<Library LVVersion="17008000">
 	<Property Name="NI.Lib.HelpPath" Type="Str"></Property>
-	<Property Name="NI.Lib.Icon" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!,&gt;!!!*Q(C=T:3R&lt;B."%)&lt;`1R3G&gt;%G"&amp;-7VKXE&amp;&amp;XE"O[)?5&gt;+Z$1X++UR(BW5*J5:']!,T#GGDC-*SB6"E=8SX73-L0OQ'",/?0@P`&gt;W?`WVO@6')A066\+DY?D;._?^RP4`CHZP^LP^O=U`NT+H1U])`/[@T\P:D&gt;D_`(D`W^G@X_X?U&gt;8N@0NL0NI8^,;UM`'R/0`4O=O\&lt;U-QI=_$O4@L:^&gt;FB`6ZS_VW]L8-@@6X```HLY:PP2YY_XH6D\(H_\[;TN;0M&lt;@\TJR&amp;(Z^0HN"L"2_@1^0W+TE59D&lt;811O\'&lt;,AZNH4Y`JY`@Z?F$_H&gt;$;AIJG7314FKZOT&lt;2%TX2%TX2%TX1!TX1!TX1!^X2(&gt;X2(&gt;X2(&gt;X1$&gt;X1$&gt;X1$&lt;UU&gt;+%,8?DM3L*YMF"3.#G1$!:&amp;3:@Q*$Q*4],$4S5]#5`#E`!E0!R2QJ0Q*$Q*4],$.#5]#5`#E`!E0*1K*&amp;E;/DQ*$_56]!1]!5`!%`#QJ!+?!#"9,#A=&amp;!&amp;$A2F]#8A#HI#(LQJY!J[!*_!*?,!6]!1]!5`!%`!QJ?R+&amp;*KOI=.$'4E]$I`$Y`!Y0*37Q_0Q/$Q/D]0$=H*Y("Y(QFH1+1[#H%H/!/?(Q_0Q=*($Y`!Y0![0QY.6HJ#8H?FIOI9/D]&amp;D]"A]"I`"1QE:0!;0Q70Q'$S5F=&amp;D]"A]"I`"QV)S?!Q?A]=!-2:F?2H&amp;D)H')%-Q?0C5UW,F+55BM&gt;,K8`0BI+I?1.7$J8JA6!_#[A.7@8#K$U2VIV5X5(6D6'^9^5:5!6586CWI/F"L_BNS23\*+X*/4ME*?5Y/O[F`?/"[P&gt;&lt;.T9V7KZ77S[7OLKYUH]]VH5YVG5RU@H[OY8$Y[WVV2HO):P&gt;?OO1\_9R]8K_0]U5X:D@W3`O^?;&gt;&amp;=`VDU8TYNGC78Q@E2@0_Z;,E^?=,P!&amp;D"MXC&lt;."]?MXV9F$GP8WFZMWGL.=]P*@_BX?DHKD&gt;?]WT2T]"$CL&gt;S!!!!!!</Property>
-	<Property Name="NI.Lib.SourceVersion" Type="Int">335577088</Property>
+	<Property Name="NI.Lib.Icon" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!,?!!!*Q(C=T:3R&lt;B."%)&lt;`1R2/G:)#+9JL6`-+,P)#=55^IK2T'RLE6ZC/$MM33IW-Y!%S41K8?1%+CQKBS/,Y&lt;L.'6GR]$1BG08PW`_`/@L?X0KH%1(KKNC]_()WD@HP=&lt;XP]PPH`WO]WJX^`_E*(!``IH-[`XYH*`?B_^.D@G8H9P\WZR?P[S7;SW@&gt;P;'XJ*S0CM8_,=^O7@E+"08^LUE]W*`PVN]8J$`JNB?PY$^8@P&lt;]$@*0&gt;//#0.JV9_Q0_:N6:G_(G.`ZIV9H$]DHENSP!BO6T[0E2KZ5U('KFP&gt;C/887R&lt;[P``01@P[P_1`JX1WI++:FEE%Z;O&lt;MWU2-^U2-^U2-^U!-^U!-^U!0&gt;U2X&gt;U2X&gt;U2X&gt;U!X&gt;U!X&gt;U!W^.(3B#VXI\%KS?,*15D1JE!Q'25G8]#1]#5`#QU]F0!F0QJ0Q*$Q-5=+4]#1]#5`#QT1F0!F0QJ0Q*$S5+C2:'DI]#1`F&amp;@!%0!&amp;0Q"0QM+1#HA!A7#QI("1"1Y%:@!FY!J[!B[]+?!+?A#@A#8CQ&amp;@!%0!&amp;0Q"0Q-+8M3B3;LK($1REZ0![0Q_0Q/$S5FM0D]$A]$I`$QX*S?"Q?"]*:U#E/AJR*TA$HB]0D](#2Q_0Q/$Q/D]/$6:[1FZXJ;,K'$I`"9`!90!;0Q5-*'4Q'D]&amp;D]"A]F*8"9`!90!;0Q=.3-HA-(I0(!$%7:8E:R9S*RC"$-(DYF..CZ3F&amp;)&lt;(3[F`TY;#K(E$6A[6[9&amp;10AOI$6HVQKA^%&gt;;.6.V"V9V2P706'6!&amp;6&amp;V9NK$J1;`I\=EEOS"EZ*3`*-8F/HH:4``$!^8KNO\M\,:&gt;,,29,T79T4;&gt;486Z?;DQ?[`T]8+?HJ\`?6G?UBWCW\[5LPJ-HZ,.[@:T0OT(&lt;M:`&lt;\]V&lt;T:PL(`0G`&lt;&gt;ZM`AS)#_;&gt;S`G*;]`8?!.'$.IZG?$ZO-LLB?$-O`.3T7PPZ&lt;VGI@XUP`Q&lt;N14N4OP?@&lt;I*]JFW6Q!!!!!</Property>
+	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.SortType" Type="Int">3</Property>
@@ -309,6 +309,7 @@
 					<Item Name="_TangoReadUShortImageAttribute.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Readers/_TangoReadUShortImageAttribute.vi"/>
 					<Item Name="_TangoReadUShortScalarAttribute.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Readers/_TangoReadUShortScalarAttribute.vi"/>
 					<Item Name="_TangoReadUShortSpectrumAttribute.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Readers/_TangoReadUShortSpectrumAttribute.vi"/>
+					<Item Name="_TangoReadAttributeVariant.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Readers/_TangoReadAttributeVariant.vi"/>
 					<Item Name="ReadAndCheckAttributeType.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Readers/ReadAndCheckAttributeType.vi"/>
 				</Item>
 				<Item Name="Extractors" Type="Folder">
@@ -389,6 +390,7 @@
 						<Item Name="avToUShortImage.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/avToValue/avToUShortImage.vi"/>
 						<Item Name="avToUShortScalar.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/avToValue/avToUShortScalar.vi"/>
 						<Item Name="avToUShortSpectrum.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/avToValue/avToUShortSpectrum.vi"/>
+						<Item Name="avToVariant.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/avToValue/avToVariant.vi"/>
 					</Item>
 					<Item Name="base" Type="Folder">
 						<Property Name="NI.SortType" Type="Int">0</Property>
@@ -401,9 +403,9 @@
 						<Item Name="toFloatImage.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toFloatImage.vi"/>
 						<Item Name="toFloatScalar.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toFloatScalar.vi"/>
 						<Item Name="toFloatSpectrum.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toFloatSpectrum.vi"/>
+						<Item Name="toLong64mage.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toLong64mage.vi"/>
 						<Item Name="toLong64Scalar.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toLong64Scalar.vi"/>
 						<Item Name="toLong64Spectrum.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toLong64Spectrum.vi"/>
-						<Item Name="toLong64mage.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toLong64mage.vi"/>
 						<Item Name="toLongImage.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toLongImage.vi"/>
 						<Item Name="toLongScalar.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toLongScalar.vi"/>
 						<Item Name="toLongSpectrum.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toLongSpectrum.vi"/>
@@ -428,6 +430,7 @@
 						<Item Name="toUShortImage.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toUShortImage.vi"/>
 						<Item Name="toUShortScalar.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toUShortScalar.vi"/>
 						<Item Name="toUShortSpectrum.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toUShortSpectrum.vi"/>
+						<Item Name="toVariant.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toVariant.vi"/>
 					</Item>
 				</Item>
 				<Item Name="Writers" Type="Folder">
