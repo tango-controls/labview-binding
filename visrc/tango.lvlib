@@ -309,6 +309,7 @@
 					<Item Name="_TangoReadUShortImageAttribute.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Readers/_TangoReadUShortImageAttribute.vi"/>
 					<Item Name="_TangoReadUShortScalarAttribute.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Readers/_TangoReadUShortScalarAttribute.vi"/>
 					<Item Name="_TangoReadUShortSpectrumAttribute.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Readers/_TangoReadUShortSpectrumAttribute.vi"/>
+					<Item Name="_TangoReadAttributeVariant.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Readers/_TangoReadAttributeVariant.vi"/>
 					<Item Name="ReadAndCheckAttributeType.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Readers/ReadAndCheckAttributeType.vi"/>
 				</Item>
 				<Item Name="Extractors" Type="Folder">
@@ -389,6 +390,7 @@
 						<Item Name="avToUShortImage.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/avToValue/avToUShortImage.vi"/>
 						<Item Name="avToUShortScalar.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/avToValue/avToUShortScalar.vi"/>
 						<Item Name="avToUShortSpectrum.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/avToValue/avToUShortSpectrum.vi"/>
+						<Item Name="avToVariant.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/avToValue/avToVariant.vi"/>
 					</Item>
 					<Item Name="base" Type="Folder">
 						<Property Name="NI.SortType" Type="Int">0</Property>
@@ -401,9 +403,9 @@
 						<Item Name="toFloatImage.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toFloatImage.vi"/>
 						<Item Name="toFloatScalar.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toFloatScalar.vi"/>
 						<Item Name="toFloatSpectrum.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toFloatSpectrum.vi"/>
+						<Item Name="toLong64Image.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toLong64Image.vi"/>
 						<Item Name="toLong64Scalar.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toLong64Scalar.vi"/>
 						<Item Name="toLong64Spectrum.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toLong64Spectrum.vi"/>
-						<Item Name="toLong64mage.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toLong64mage.vi"/>
 						<Item Name="toLongImage.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toLongImage.vi"/>
 						<Item Name="toLongScalar.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toLongScalar.vi"/>
 						<Item Name="toLongSpectrum.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toLongSpectrum.vi"/>
@@ -428,6 +430,7 @@
 						<Item Name="toUShortImage.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toUShortImage.vi"/>
 						<Item Name="toUShortScalar.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toUShortScalar.vi"/>
 						<Item Name="toUShortSpectrum.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toUShortSpectrum.vi"/>
+						<Item Name="toVariant.vi" Type="VI" URL="../Client VIs/Private VIs/Attributes/Extractors/base/toVariant.vi"/>
 					</Item>
 				</Item>
 				<Item Name="Writers" Type="Folder">
