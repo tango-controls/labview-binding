@@ -73,6 +73,9 @@
 			</Item>
 			<Item Name="lvanlys.so" Type="Document" URL="/&lt;resource&gt;/lvanlys.so"/>
 			<Item Name="tango.lvlib" Type="Library" URL="../../vis/tango_vi.llb/tango.lvlib"/>
+			<Item Name="tango_binding.dll" Type="Document" URL="tango_binding.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
 			<Item Name="tango_binding.so" Type="Document" URL="tango_binding.so">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
