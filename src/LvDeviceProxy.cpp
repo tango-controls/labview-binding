@@ -458,7 +458,10 @@ void LvDeviceProxy::attribute_list (Tango::AttributeInfoList* _attribute_list)
         Tango::DeviceData ddo = db->command_inout("DbGetAttributeAlias2", ddi);
         ddo >> ai.alias;
       }
-      catch (...) { /* ignore error and use attribute name */ }
+      catch (...) 
+      { 
+        /* ignore error and use attribute name */ 
+      }
     }
     dev_attributes_[ai.name] = ai;
   }
@@ -466,4 +469,3 @@ void LvDeviceProxy::attribute_list (Tango::AttributeInfoList* _attribute_list)
   delete db;
   delete _attribute_list;
 }
-
