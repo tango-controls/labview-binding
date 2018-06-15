@@ -66,6 +66,10 @@
 			<Item Name="tango_binding.so" Type="Document" URL="tango_binding.so">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="tango_binding.dll" Type="Document" URL="tango_binding.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="tango_binding.so" Type="Document" URL="../../vis/tango_binding.so"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Flattened LLB" Type="Source Distribution">
@@ -89,7 +93,7 @@
 				<Property Name="Bld_postActionVIID" Type="Ref">/My Computer/SetTopLevelInLLB.vi</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{3681D321-4A21-11E8-A973-54BEF7083B20}</Property>
 				<Property Name="Bld_removeVIObj" Type="Int">1</Property>
-				<Property Name="Bld_version.build" Type="Int">16</Property>
+				<Property Name="Bld_version.build" Type="Int">17</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Destination[0].destName" Type="Str">Destination Directory</Property>

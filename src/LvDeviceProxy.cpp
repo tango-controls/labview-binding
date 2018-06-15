@@ -427,32 +427,45 @@ void LvDeviceProxy::attribute_list (Tango::AttributeInfoList* _attribute_list)
 
   std::size_t s = _attribute_list->size();
 
-  Tango::Database db;
+  Tango::Database * db = 0;
+  try
+  {
+    db = new Tango::Database();
+  }
+  catch (...)
+  {
+    delete db;
+    db = 0;
+  }
   
   for ( std::size_t i = 0; i < s; i++ )
   {
     AttributeInfo ai;
     ai.dev = dev_name_;
     ai.name = (*_attribute_list)[i].name;
+    ai.alias = ai.name;
     ai.writable = (*_attribute_list)[i].writable;
     ai.data_format = (*_attribute_list)[i].data_format;
     ai.data_type = static_cast<Tango::CmdArgType>((*_attribute_list)[i].data_type);
-    try
+    if ( db )
     {
-      std::string fqn;
-      fqn = name() + "/" + ai.name;
-      Tango::DeviceData ddi;
-      ddi << fqn;
-      Tango::DeviceData ddo = db.command_inout("DbGetAttributeAlias2", ddi);
-      ddo >> ai.alias;
-    }
-    catch (...)
-    {
-      ai.alias = ai.name;
+      try
+      {
+        std::string fqn;
+        fqn = name() + "/" + ai.name;
+        Tango::DeviceData ddi;
+        ddi << fqn;
+        Tango::DeviceData ddo = db->command_inout("DbGetAttributeAlias2", ddi);
+        ddo >> ai.alias;
+      }
+      catch (...) 
+      { 
+        /* ignore error and use attribute name */ 
+      }
     }
     dev_attributes_[ai.name] = ai;
   }
- 
+
+  delete db;
   delete _attribute_list;
 }
-
