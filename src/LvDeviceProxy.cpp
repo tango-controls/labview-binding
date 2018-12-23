@@ -90,10 +90,27 @@ LvDeviceProxy::~LvDeviceProxy ()
 }
 
 //=============================================================================
+// LvDeviceProxy::check_tango_host
+//=============================================================================
+void LvDeviceProxy::check_tango_host()
+    throw (Tango::DevFailed)
+{  
+  char* th = getenv ("TANGO_HOST");
+  if ( ! th)  {
+    Tango::Except::throw_exception(_CPTC_("configuration error"),
+                                   _CPTC_("TANGO_HOST environment variable is not set [a TANGO_HOST=<host>:<port> env. var. should point to your Tango database]"),
+                                   _CPTC_("LvDeviceProxy::check_tango_host"));
+  } 
+}
+    
+
+//=============================================================================
 // LvDeviceProxy::connect
 //=============================================================================
 void LvDeviceProxy::connect()
 {
+  check_tango_host();
+  
   if ( dev_proxy_ )
     return;
 

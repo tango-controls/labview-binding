@@ -18,6 +18,7 @@
 //=============================================================================
 #include "CommonHeader.h"
 #include "ThreadSafeDeviceProxy.h"
+#include <boost/concept_check.hpp>
 
 //=============================================================================
 // DEFINEs
@@ -141,6 +142,10 @@ private:
   void attribute_list (Tango::AttributeInfoList* attribute_list);
   // Set the device attributes list
 
+  void check_tango_host()
+    throw (Tango::DevFailed);
+  // Check that TANGO_HOST is defined (throw DevFailed otherwise)
+  
   std::string dev_name_;
   // The device name (for reconnection)
   
