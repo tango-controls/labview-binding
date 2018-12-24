@@ -18,7 +18,6 @@
 //=============================================================================
 #include "CommonHeader.h"
 #include "ThreadSafeDeviceProxy.h"
-#include <boost/concept_check.hpp>
 
 //=============================================================================
 // DEFINEs
