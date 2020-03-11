@@ -2684,32 +2684,56 @@ void DataAdapter::encode_attr (const AttributeInfo& attr_info,
           //-- SPECTRUM/IMAGE::DEVVAR_STRINGARRAY -----------------------------
           case Tango::DEV_STRING: 
             {
+              //-------------------------------------------------------------------------------------------
+              //- big trick here!
+              //-------------------------------------------------------------------------------------------
+              //- data is generically passed to the Labview env. through <LvAttributeValue.data> - which
+              //- is supposed to be an array of bytes reinterpreted by the extractor VIs. means that we 
+              //- can't pass the result as a 1D array of strings. we choose to pass it as an array of bytes
+              //- in which the strings (i.e. the ones contained into the Tango::DevVarStringArray) are 
+              //- stored contiguously and separated by a '\0' character. the dedicated extractor VI will 
+              //- have to rebuild the expected 1D (or 2D) array of srings (transparent op. for end user).
+              //-------------------------------------------------------------------------------------------
               if ( Tango::IMAGE == attr_info.data_format )
               {
                 Tango::Except::throw_exception(_CPTC_("unsupported feature"),
                                                _CPTC_("there is currently no support for <image of strings> attribute"),
                                                _CPTC_("DataAdapter::encode_attr"));
               }
-              LvStringArrayHdl h = reinterpret_cast<LvStringArrayHdl>(lv_attr->data);
+              // reinterpret lv_attr data as a generic buffer of uchar 
+              LvGenericNumArrayHdl h = reinterpret_cast<LvGenericNumArrayHdl>(lv_attr->data);
               if ( ! h || ! (*h) )
               {
                 Tango::Except::throw_exception(_CPTC_("invalid parameter"),
                                                _CPTC_("unexpected null pointer"),
                                                _CPTC_("DataAdapter::encode_attr"));;
               }
-	            Tango::DevVarStringArray *str_array = new Tango::DevVarStringArray((*h)->length);
+              // we need to count the '\0' characters in order to determine the number of strings into the incoming buffer
+              // this is a prerequirement of Tango::DevVarStringArray allocation
+              std::size_t n = 0;
+              const char * p = reinterpret_cast<const char*>((*h)->data);
+              const char * e = reinterpret_cast<const char*>((*h)->data) + (*h)->length;
+              while ( p < e )
+              {
+                std::size_t l = std::strlen(p);
+                n++;
+                p += l + 1;
+              }
+              // ok we have n strings into the incoming buffer, let's copy the n strings into the a Tango::DevVarStringArray
+	            Tango::DevVarStringArray *str_array = new Tango::DevVarStringArray(n);
               if ( ! str_array ) 
               {
                 Tango::Except::throw_exception(_CPTC_("memory error"),
                                                _CPTC_("memory allocation failed"),
                                                _CPTC_("DataAdapter::encode_attr"));
               }
-              str_array->length((*h)->length);
-              LvStringHdl sh = 0;
-	            for (tbfl::size_t i = 0; i < (*h)->length; i++) 
+              str_array->length(n);
+              std::size_t i = 0;
+              p = reinterpret_cast<const char*>((*h)->data);
+              while ( p < e )
               {
-                sh = (*h)->data[i];
-                (*str_array)[i] = CORBA::string_alloc((*sh)->length + 1);
+                std::size_t l = std::strlen(p);
+                (*str_array)[i] = CORBA::string_alloc(l + 1);
                 if ( ! (*str_array)[i] ) 
                 {
                   delete str_array;
@@ -2717,8 +2741,10 @@ void DataAdapter::encode_attr (const AttributeInfo& attr_info,
                                                  _CPTC_("memory allocation failed"),
                                                  _CPTC_("DataAdapter::encode_attr"));
                 }
-                ::memcpy((*str_array)[i], (*sh)->data, (*sh)->length);
-                ::memset((*str_array)[i] + (*sh)->length, 0 , 1);
+                ::memcpy((*str_array)[i], p, l);
+                ::memset((*str_array)[i] + l, 0 , 1);
+                p += l + 1;
+                i++;
 	            }
               tg_attr << str_array;
             } 

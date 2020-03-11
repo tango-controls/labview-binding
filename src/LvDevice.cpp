@@ -571,7 +571,7 @@ LvDeviceProxy* LvDevice::interface ()
     delete tg_device_intf_;
     //- proxy to ourself to obtain attribute & command info compatible
     //- with the DataAdapter (here, we want to reuse the client part)
-    //-TODO: write a LvDeviceProxy ctor accepting a xmi:Class as 2nd parameter
+    //- TODO: write a LvDeviceProxy ctor accepting a xmi:Class as 2nd parameter
     tg_device_intf_ = new LvDeviceProxy(device_name_);
     // reset interface changed flag
     interface_changed_ = false;
@@ -727,8 +727,8 @@ void LvDevice::add_dynamic_interface ()
         << device_name_
         << "'";
     Tango::Except::throw_exception(_CPTC_("DEVICE_ERROR"),
-                                    _CPTC_(oss.str().c_str()),
-                                    _CPTC_("LvDevice::add_dynamic_interface"));
+                                   _CPTC_(oss.str().c_str()),
+                                   _CPTC_("LvDevice::add_dynamic_interface"));
   }
 
   //- instanciate the DynamicInterfaceManager on heap (due to the Tango kernel impl. of the "Restart Device" feature) 

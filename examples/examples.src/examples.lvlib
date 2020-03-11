@@ -12,13 +12,14 @@
 		<Item Name="Attributes" Type="Folder">
 			<Item Name="AttributeInfo.vi" Type="VI" URL="../Client/Attributes/AttributeInfo.vi"/>
 			<Item Name="AttributesInfo.vi" Type="VI" URL="../Client/Attributes/AttributesInfo.vi"/>
-			<Item Name="ReadAttributeTest.vi" Type="VI" URL="../Client/Attributes/ReadAttributeTest.vi"/>
 			<Item Name="ReadAttributesTest.vi" Type="VI" URL="../Client/Attributes/ReadAttributesTest.vi"/>
+			<Item Name="ReadAttributeTest.vi" Type="VI" URL="../Client/Attributes/ReadAttributeTest.vi"/>
 			<Item Name="ReadStringSpectrumAndImageAttributes.vi" Type="VI" URL="../Client/Attributes/ReadStringSpectrumAndImageAttributes.vi"/>
 			<Item Name="StateScalarStateColorStateName.vi" Type="VI" URL="../Client/Attributes/StateScalarStateColorStateName.vi"/>
 			<Item Name="VariantAttributeReadExample.vi" Type="VI" URL="../Client/Attributes/VariantAttributeReadExample.vi"/>
-			<Item Name="WriteAttributeTest.vi" Type="VI" URL="../Client/Attributes/WriteAttributeTest.vi"/>
 			<Item Name="WriteAttributesTest.vi" Type="VI" URL="../Client/Attributes/WriteAttributesTest.vi"/>
+			<Item Name="WriteAttributeTest.vi" Type="VI" URL="../Client/Attributes/WriteAttributeTest.vi"/>
+			<Item Name="WriteStringSpectrumAttribute.vi" Type="VI" URL="../Client/Attributes/WriteStringSpectrumAttribute.vi"/>
 			<Item Name="WrittingSpectrumAndImageAttributes.vi" Type="VI" URL="../Client/Attributes/WrittingSpectrumAndImageAttributes.vi"/>
 		</Item>
 		<Item Name="Commands" Type="Folder">
@@ -97,9 +98,9 @@
 			<Item Name="AttributesDataStorage.vi" Type="VI" URL="../Server/Device Servers/AttributesDataStorage.vi"/>
 			<Item Name="MultiDeviceDServer.vi" Type="VI" URL="../Server/Device Servers/MultiDeviceDServer.vi"/>
 			<Item Name="SineWaver.vi" Type="VI" URL="../Server/Device Servers/SineWaver.vi"/>
+			<Item Name="sinewavercontrols.vi" Type="VI" URL="../Server/Device Servers/sinewavercontrols.vi"/>
 			<Item Name="SineWaverTangoInterfaceManager.vi" Type="VI" URL="../Server/Device Servers/SineWaverTangoInterfaceManager.vi"/>
 			<Item Name="SingleDeviceDServer.vi" Type="VI" URL="../Server/Device Servers/SingleDeviceDServer.vi"/>
-			<Item Name="sinewavercontrols.vi" Type="VI" URL="../Server/Device Servers/sinewavercontrols.vi"/>
 		</Item>
 	</Item>
 </Library>
