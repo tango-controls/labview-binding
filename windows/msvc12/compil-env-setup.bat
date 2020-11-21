@@ -26,13 +26,13 @@ set PATH=%BINDING_PATH%\vis;%PATH%
 :: ======== NI-LABVIEW PATHS ======== 
 ::------------------------------------------------------------------------
 ::set LV_ROOT32=C:\Program Files (x86)\National Instruments\LabVIEW 2014
-set LV_ROOT32=%BINDING_PATH%\labview\2014
+set LV_ROOT32=%BINDING_PATH%\labview\2015
 set LV_INC32=%LV_ROOT32%\cintools-x32
 set LV_LIB32=%LV_ROOT32%\cintools-x32
 SET LV_LIB32_LIST=labview.lib
 
 ::set LV_ROOT64=C:\Program Files\National Instruments\LabVIEW 2014
-set LV_ROOT64=%BINDING_PATH%\labview\2014
+set LV_ROOT64=%BINDING_PATH%\labview\2017
 set LV_INC64=%LV_ROOT64%\cintools
 set LV_LIB64=%LV_ROOT64%\cintools
 SET LV_LIB64_LIST=labview.lib
